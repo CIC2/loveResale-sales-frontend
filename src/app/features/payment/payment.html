@@ -1,0 +1,32 @@
+<main class="payment-page">
+  <!-- Breadcrumb -->
+  <nav class="payment-page__breadcrumb">
+    <a class="payment-page__breadcrumb-link">
+      {{ 'payment.breadcrumb.profile' | transloco }}
+    </a>
+    <span class="payment-page__breadcrumb-separator">›</span>
+    <span class="payment-page__breadcrumb-current">
+      {{ 'payment.breadcrumb.reservedUnits' | transloco }}
+    </span>
+  </nav>
+
+  <!-- Header -->
+  <header class="payment-page__header">
+    <h1 class="payment-page__title">
+      {{ 'payment.title' | transloco }}
+    </h1>
+    <span class="payment-page__brand">Homfly.</span>
+  </header>
+
+  <!-- Content -->
+  <div class="payment-page__content">
+    <div class="payment-page__left">
+      <app-payment-summary [data]="paymentSummaryData()" />
+      <app-payment-methods (methodSelected)="onPaymentMethodSelected($event)" />
+    </div>
+    
+    <div class="payment-page__right">
+      <app-payment-preview [unit]="unitPreviewData()" />
+    </div>
+  </div>
+</main>

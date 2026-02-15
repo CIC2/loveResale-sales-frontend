@@ -1,0 +1,50 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+::ng-deep .compare-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1000;
+  margin-top: auto;
+  margin-bottom: 0.813rem;
+  margin-right: 0.625rem;
+  align-self: flex-end;
+  
+  .open-drawer-btn {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  .badge {
+    width: 1.625rem;
+    height: 1.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    color: #fff;
+    font-weight: 600;
+    font-size: var(--font-size-1);
+    border-radius: 50%;
+    margin-top: -4.313rem;
+    margin-right: -0.563rem;
+    align-self: flex-end;
+  }
+}

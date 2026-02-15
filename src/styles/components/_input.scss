@@ -1,0 +1,36 @@
+.p-inputtext {
+  font-size: var(--font-size-1);
+  width: 100%;
+  &.ng-touched.ng-invalid {
+    border-color: var(--error);
+  }
+}
+
+.p-inputnumber {
+  width: 100%;
+  &.ng-touched.ng-invalid {
+    .p-inputnumber-input {
+      border-color: var(--error);
+    }
+  }
+}
+.p-password {
+  width: 100%;
+  &.ng-touched.ng-invalid {
+    .p-inputtext {
+      border-color: var(--error);
+    }
+  }
+}
+
+.p-inputotp {
+  .p-inputtext {
+    width: 2.5rem;
+    height: 3rem;
+  }
+  &.ng-touched.ng-invalid {
+    .p-inputtext {
+      border-color: var(--error);
+    }
+  }
+}

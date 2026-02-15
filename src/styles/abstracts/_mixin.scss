@@ -1,0 +1,23 @@
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin font($size, $weight, $line-height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin icon-with-text($gap: 0.5rem, $svg-size: 1rem) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+
+  svg-icon {
+    width: $svg-size;
+    height: $svg-size;
+  }
+}

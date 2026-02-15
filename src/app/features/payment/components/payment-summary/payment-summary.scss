@@ -1,0 +1,135 @@
+.payment-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: var(--font-size-5);
+    font-weight: 600;
+    color: var(--primary-600);
+    margin: 0;
+  }
+
+  &__icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 2.5rem;
+    background-color: var(--primary-100);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    svg{
+      width: 0.665rem;
+      height: 0.665rem;
+    }
+
+    &:hover {
+      background-color: var(--primary-700);
+    }
+  }
+
+  &__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--white);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__label {
+    font-size: var(--font-size-0);
+    color: var(--text-secondary);
+  }
+
+  &__value {
+    font-size: var(--font-size-2);
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 0.0625rem solid var(--border-color);
+  }
+
+  &__amount {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__amount-label {
+    font-size: var(--font-size-0);
+    color: var(--text-secondary);
+  }
+
+  &__amount-value {
+    font-size: var(--font-size-4);
+    font-weight: 700;
+    color: var(--primary-600);
+  }
+
+  &__history-btn {
+    background-color: var(--primary-600);
+    border-color: var(--primary-600);
+    font-weight: 500;
+    padding: 0.625rem 1.25rem;
+
+    &:hover {
+      background-color: var(--primary-700);
+      border-color: var(--primary-700);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-summary {
+    padding: 1rem;
+
+    &__title {
+      font-size: var(--font-size-4);
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    &__footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__amount-value {
+      font-size: var(--font-size-3);
+    }
+  }
+}

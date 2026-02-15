@@ -1,0 +1,185 @@
+.add-lead-form {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  max-width: 89rem;
+  margin: 0 auto;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__section-title {
+    font-size: var(--font-size-3);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 48rem) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &--full {
+      width: 100%;
+    }
+  }
+
+
+  &__label {
+    font-size: var(--font-size-1);
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: var(--font-size-1);
+    border: 0.0625rem solid var(--border-color);
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    color: var(--text-primary);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 0.125rem rgba(45, 106, 79, 0.1);
+    }
+
+    &::placeholder {
+      color: var(--text-tertiary);
+    }
+  }
+
+  &__select {
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 0.0625rem solid var(--border-color);
+
+    @media (max-width: 48rem) {
+      flex-direction: column;
+    }
+  }
+
+  ::ng-deep &__cancel-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-1);
+    font-weight: 500;
+    border: 0.0625rem solid var(--primary);
+    border-radius: 0.5rem;
+    color: var(--primary);
+    background-color: var(--white);
+
+    &:enabled:hover {
+      background-color: var(--primary-50);
+      border-color: var(--primary-600);
+    }
+  }
+
+  ::ng-deep &__submit-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-1);
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+
+    .p-button-icon {
+      margin-inline-start: 0.5rem;
+    }
+
+    &:enabled:hover {
+      background-color: var(--primary-600);
+    }
+
+    &:enabled:active {
+      background-color: var(--primary-700);
+    }
+  }
+}
+
+// PrimeNG Select Overrides
+:host ::ng-deep {
+  .add-lead-form__select {
+    .p-select {
+      width: 100%;
+      border: 0.0625rem solid var(--border-color);
+      border-radius: 0.5rem;
+      background-color: var(--white);
+
+      &:hover {
+        border-color: var(--border-color-hover);
+      }
+
+      &.p-focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 0.125rem rgba(45, 106, 79, 0.1);
+      }
+
+      .p-select-label {
+        padding: 0.75rem 1rem;
+        font-size: var(--font-size-1);
+        color: var(--text-primary);
+
+        &.p-placeholder {
+          color: var(--text-tertiary);
+        }
+      }
+
+      .p-select-trigger {
+        padding-inline-end: 1rem;
+        color: var(--text-secondary);
+      }
+    }
+
+    .p-select-overlay {
+      border: 0.0625rem solid var(--border-color);
+      border-radius: 0.5rem;
+      box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+
+      .p-select-option {
+        padding: 0.75rem 1rem;
+        font-size: var(--font-size-1);
+
+        &:hover,
+        &.p-focus {
+          background-color: var(--gray-50);
+        }
+
+        &.p-highlight {
+          background-color: var(--primary-5);
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<section class="projects-page">
+  <!-- Hero Section -->
+  <app-projects-hero class="projects-page__hero" />
+
+  <!-- Projects List -->
+  <div class="projects-page__content">
+    <div class="projects-page__list">
+      @for (project of projects(); track project.id) {
+        <app-project-card
+          [project]="project"
+          (projectClick)="onProjectClick($event)"
+          class="projects-page__card"
+        />
+      }
+    </div>
+  </div>
+</section>

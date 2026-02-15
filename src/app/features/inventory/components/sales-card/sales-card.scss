@@ -1,0 +1,102 @@
+.sales-card {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    min-width: 20rem;
+    max-width: 28.4375rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    inset-inline-end: 1rem;
+    background: none;
+    border: none;
+    font-size: var(--font-size-5);
+    color: var(--text-secondary);
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: var(--gray-100);
+    }
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__person-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+  }
+
+  &__name {
+    font-size: var(--font-size-3);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  &__status-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__status-indicator {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--success);
+  }
+
+  ::ng-deep &__status-select {
+    .p-select {
+      border: none;
+      background: transparent;
+      padding: 0;
+
+      .p-select-label {
+        padding: 0;
+        color: var(--success);
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<section class="mobile-app-promo">
+  <div class="promo-text">
+    <p>{{ "mobileApp.ready" | transloco }}</p>
+
+    <p>{{ "mobileApp.download" | transloco }}</p>
+
+    <p>
+      {{ "mobileApp.description" | transloco }}
+    </p>
+
+    <footer>
+      <img
+        src="icons/google_play.svg"
+        [alt]="'mobileApp.googlePlay' | transloco"
+      />
+      <img src="icons/app-store.svg" [alt]="'mobileApp.appStore' | transloco" />
+    </footer>
+  </div>
+
+  <img
+    class="promo-image"
+    src="images/mobil-app.svg"
+    [alt]="'mobileApp.imageAlt' | transloco"
+  />
+</section>

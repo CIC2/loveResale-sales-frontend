@@ -1,0 +1,17 @@
+.custom-icon svg,
+.custom-icon svg *,
+.custom-icon svg path,
+.custom-icon svg circle,
+.custom-icon svg rect,
+.custom-icon svg line {
+  stroke: inherit !important;
+  fill: currentColor !important;
+}
+
+// Global SVG color - applies primary color to all SVG paths
+svg path,
+svg circle,
+svg rect,
+svg line {
+  fill: var(--primary-600);
+}

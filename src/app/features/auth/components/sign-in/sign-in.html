@@ -1,0 +1,120 @@
+<main class="auth">
+  <!-- Left Side -->
+  <aside class="auth__left">
+    <div class="auth__slider">
+      <swiper-container #swiper init="false" lazy="true">
+        @for (item of signInList; track $index) {
+        <swiper-slide class="auth__slide">
+          <img src="{{ item.img }}" alt="Sign-in image" loading="lazy" />
+          <div class="auth__overlay"></div>
+        </swiper-slide>
+        }
+      </swiper-container>
+
+      <a href="/" class="auth__logo">
+        <img src="images/auth/login.png" alt="TMG logo" />
+      </a>
+    </div>
+
+    <div class="auth__text">
+      <h2>{{ "auth.sliderTitle" | transloco }}</h2>
+      <p>{{ "auth.sliderDescription" | transloco }}</p>
+    </div>
+
+    <div class="auth__pagination">
+      @for (dot of signInList; track $index) {
+      <span
+        class="auth__dot"
+        [class.auth__dot--active]="currentIndex() === $index"
+      ></span>
+      }
+    </div>
+  </aside>
+
+  <!-- Right Side -->
+  <section class="auth__right">
+    <div class="auth__form-wrapper">
+      <header class="auth__header">
+        <h1>{{ "auth.welcomeTitle" | transloco }}</h1>
+        <p>{{ "auth.welcomeSubtitle" | transloco }}</p>
+      </header>
+
+      <form
+        [formGroup]="signInForm"
+        id="myForm"
+        (ngSubmit)="onSubmit()"
+        class="auth__form"
+        autocomplete="off"
+      >
+        <!-- Phone -->
+        <div class="auth__form-group">
+          <label for="phone">
+            {{ "auth.phoneLabel" | transloco }}
+          </label>
+          <mobile-number-input></mobile-number-input>
+        </div>
+
+        <!-- Password -->
+        <div class="auth__form-group">
+          <label for="password">
+            {{ "auth.passwordLabel" | transloco }}
+          </label>
+
+          <p-password
+            id="password"
+            [toggleMask]="true"
+            [feedback]="false"
+            fluid
+            [placeholder]="'auth.passwordPlaceholder' | transloco"
+            formControlName="password"
+          ></p-password>
+
+          <validation-error
+            [control]="signInForm.controls['password']"
+          ></validation-error>
+        </div>
+
+        <!-- Forget password -->
+        <div class="auth__options">
+          <p-button
+            type="button"
+            text
+            (click)="openForgetPassword()"
+            aria-label="Forget Password"
+            [label]="'auth.forgetPassword' | transloco"
+          >
+          </p-button>
+        </div>
+      </form>
+
+      <!-- Footer -->
+      <footer class="auth__footer">
+        <p-button
+          form="myForm"
+          [disabled]="loading()"
+          aria-label="Sign in"
+          (click)="onSubmit()"
+          fluid
+        >
+          <span pButtonLabel>
+            {{
+              loading()
+                ? ("auth.loading" | transloco)
+                : ("auth.signIn" | transloco)
+            }}
+          </span>
+        </p-button>
+
+        <div>
+          <span>{{ "auth.noAccount" | transloco }}</span>
+          <p-button
+            [label]="'auth.signUp' | transloco"
+            aria-label="Go to Sign Up page"
+            link
+            (click)="openSignUp()"
+          />
+        </div>
+      </footer>
+    </div>
+  </section>
+</main>

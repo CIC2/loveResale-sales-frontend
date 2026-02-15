@@ -1,0 +1,74 @@
+<section class="similar-units">
+  <div class="similar-units__container">
+    <!-- Header -->
+    <header class="similar-units__header">
+      <h2 class="similar-units__title">
+        {{ 'modelDetails.similarUnits.title' | transloco }}
+      </h2>
+
+      <p-button
+        [label]="'modelDetails.similarUnits.seeAll' | transloco"
+        styleClass="similar-units__see-all-btn"
+        (onClick)="onViewAll()"
+      />
+    </header>
+
+    <!-- Units Grid -->
+    <div class="similar-units__grid">
+      @for (unit of units(); track unit.id) {
+        <article
+          class="similar-units__card"
+          (click)="onUnitClick(unit.id)"
+          role="button"
+          tabindex="0"
+        >
+          <!-- Image -->
+          <figure class="similar-units__card-image">
+            <img
+              [src]="unit.imageUrl"
+              appImageFallback
+              [alt]="unit.title"
+            />
+          </figure>
+
+          <!-- Content -->
+          <div class="similar-units__card-content">
+            <h3 class="similar-units__card-title">{{ unit.title }}</h3>
+
+            <!-- Features -->
+            <div class="similar-units__card-features">
+              <span class="similar-units__card-feature">
+                <svg-icon name="bed" class="similar-units__feature-icon" />
+                {{ unit.bedrooms }} {{ 'modelDetails.similarUnits.bedrooms' | transloco }}
+              </span>
+              <span class="similar-units__card-feature">
+                <svg-icon name="bath" class="similar-units__feature-icon" />
+                {{ unit.bathrooms }} {{ 'modelDetails.similarUnits.bathrooms' | transloco }}
+              </span>
+              <span class="similar-units__card-feature">
+                <svg-icon name="size" class="similar-units__feature-icon" />
+                {{ unit.area }} {{ 'unitCard.squareMeter' | transloco }}
+              </span>
+              @if (unit.readyToMove) {
+                <span class="similar-units__card-feature similar-units__card-feature--ready">
+                  <svg-icon name="house-key" class="similar-units__feature-icon" />
+                  {{ 'modelDetails.similarUnits.readyToMove' | transloco }}
+                </span>
+              }
+            </div>
+
+            <!-- Price -->
+            <div class="similar-units__card-price">
+              <span class="similar-units__price-label">
+                {{ 'modelDetails.similarUnits.startingFrom' | transloco }}
+              </span>
+              <span class="similar-units__price-value">
+                {{ unit.price | number:'1.0-0' }} {{ 'currencies.EGP' | transloco }}
+              </span>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

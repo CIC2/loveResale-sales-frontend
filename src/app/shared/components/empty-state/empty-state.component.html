@@ -1,0 +1,10 @@
+<div class="empty-state">
+  <svg-icon name="404" class="empty-state__icon"></svg-icon>
+  <div class="empty-state__text">
+    @if (customContent()) {
+      <ng-container *ngTemplateOutlet="customContent()!"></ng-container>
+    } @else {
+      No Results Found
+    }
+  </div>
+</div>

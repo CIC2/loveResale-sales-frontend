@@ -1,0 +1,34 @@
+.unit-overview {
+  padding: 1.5rem;
+
+  &__title {
+    font-size: var(--font-size-5);
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0 0 1rem 0;
+  }
+
+  &__description {
+    font-size: var(--font-size-2);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+  }
+
+  &__expand-btn {
+    ::ng-deep .p-button {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
+      font-weight: 500;
+      padding: 0.625rem 1.5rem;
+      font-size: var(--font-size-1);
+      border-radius: 0.5rem;
+
+      &:hover:not(:disabled) {
+        background-color: var(--primary-600);
+        border-color: var(--primary-600);
+      }
+    }
+  }
+}

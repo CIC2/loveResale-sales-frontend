@@ -1,0 +1,43 @@
+<main class="all-units-page">
+  <!-- Search Header -->
+  <div class="all-units-page__header">
+    <app-search-header
+      [typeOptions]="typeOptions()"
+      [projectOptions]="projectOptions()"
+      (search)="onSearch($event)"
+      (keywordClick)="onKeywordClick($event)"
+    />
+  </div>
+
+  <!-- Main Content -->
+  <div class="all-units-page__content">
+    <!-- Sidebar -->
+    <aside class="all-units-page__sidebar">
+      <app-filters-sidebar
+        [locationOptions]="locationOptions()"
+        [projectOptions]="projectOptions()"
+        [typeOptions]="typeOptions()"
+        [deliveryOptions]="deliveryOptions()"
+        [modelOptions]="modelOptions()"
+        (filtersChange)="onFiltersChange($event)"
+        (resetFilters)="onResetFilters()"
+      />
+    </aside>
+
+    <!-- Units Grid -->
+    <section class="all-units-page__grid">
+      <app-units-grid
+        [units]="units()"
+        [totalRecords]="totalRecords()"
+        [currentPage]="currentPage()"
+        [pageSize]="pageSize()"
+        [loading]="loading()"
+        (pageChange)="onPageChange($event)"
+        (favoriteClick)="onFavoriteClick($event)"
+        (cardClick)="onCardClick($event)"
+      />
+    </section>
+  </div>
+
+ 
+</main>

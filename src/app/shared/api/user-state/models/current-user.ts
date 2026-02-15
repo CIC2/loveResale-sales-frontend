@@ -1,0 +1,34 @@
+export interface CurrentUserResponse {
+  customerId: number;
+  fullName: string;
+  mobile: string;
+  email: string;
+  nationality: string;
+  address: any;
+  isVerified: boolean;
+  nationalId: any;
+  passportNumber: string;
+  countryCode: string;
+  education: any;
+  occupation: any;
+  gender: any;
+  country: any;
+  landline: any;
+  area: any;
+  birthdate: string;
+  hasAppointmentToRate?: boolean;
+  hasActiveCall?: boolean;
+  appointmentId?: number;
+  isMarried: any;
+  numberOfChildren: any;
+  sapPartnerId: string;
+  profileCompletion: string;
+  profilePictureImageType: string;
+  nationalIdImageType: string;
+  fcmToken: any;
+  isNewCustomer: any;
+  projectNames: any[];
+  showPopup: boolean;
+  popupContent: any;
+  popupTitle: string;
+}

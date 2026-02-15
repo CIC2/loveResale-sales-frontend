@@ -1,0 +1,59 @@
+<section class="projects-listing">
+  <div class="projects-listing__container">
+    <!-- Header -->
+    <div class="projects-listing__header">
+      <h2 class="projects-listing__title">
+        {{ 'home.projectsListing.title' | transloco }}
+      </h2>
+      <p-button
+        [label]="'home.projectsListing.viewAll' | transloco"
+        icon="pi pi-arrow-right"
+        iconPos="right"
+        class="projects-listing__view-all"
+      />
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-listing__grid">
+      @for (project of projects; track project.id) {
+        <div class="project-card" (click)="viewProjectDetails(project.id)">
+          <div class="project-card__image-wrapper">
+            <img 
+              [src]="project.image" 
+              [alt]="project.title" 
+              class="project-card__image" 
+            />
+          </div>
+          
+          <div class="project-card__content">
+            <h3 class="project-card__title">{{ project.title }}</h3>
+            
+            <div class="project-card__features">
+              <span class="project-card__feature">
+                {{ project.bedrooms }} {{ 'home.projectsListing.bedrooms' | transloco }}
+              </span>
+              <span class="project-card__feature">
+                {{ project.bathrooms }} {{ 'home.projectsListing.bathrooms' | transloco }}
+              </span>
+              <span class="project-card__feature">
+                {{ project.area }} {{ 'home.projectsListing.sqm' | transloco }}
+              </span>
+              <span class="project-card__feature">
+                {{ 'home.projectsListing.' + project.status | transloco }}
+              </span>
+            </div>
+            
+            <div class="project-card__price-section">
+              <span class="project-card__price-label">
+                {{ 'home.projectsListing.startingFrom' | transloco }}
+              </span>
+              <span class="project-card__price">
+                {{ project.price }} <span class="project-card__currency">{{ 'home.projectsListing.currency' | transloco }}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+<section class="model-details">
+  <!-- Gallery Section -->
+  <app-unit-gallery
+    [images]="galleryImages()"
+    class="model-details__gallery"
+  />
+
+  <!-- Main Content -->
+  <div class="model-details__content">
+    <div class="model-details__container">
+      <!-- Left Column - Main Info -->
+      <main class="model-details__main">
+        <!-- Unit Info Header -->
+        <app-unit-info-header
+          [unitData]="unitData()"
+          class="model-details__info-header"
+        />
+
+        <!-- Payment Plan -->
+        <app-payment-plan
+          [paymentInfo]="paymentInfo()"
+          class="model-details__section"
+        />
+
+        <!-- Overview -->
+        <app-unit-overview
+          [description]="overviewText()"
+          class="model-details__section"
+        />
+
+        <!-- Unit Features -->
+        <app-unit-features
+          [features]="unitFeatures()"
+          class="model-details__section"
+        />
+
+        <!-- Project Features -->
+        <app-project-features
+          [features]="projectFeatures()"
+          class="model-details__section"
+        />
+
+        <!-- Map -->
+        <app-unit-map class="model-details__section" />
+      </main>
+
+      <!-- Right Column - Contact Salesman -->
+      <aside class="model-details__sidebar">
+        <app-contact-salesman
+          (viewInstallmentPlan)="onViewInstallmentPlan()"
+          (reserveUnit)="onReserveUnit()"
+        />
+      </aside>
+    </div>
+  </div>
+
+  <!-- Similar Units -->
+  <app-similar-units
+    [units]="similarUnits()"
+    (viewAllClick)="onViewAllUnits()"
+    (unitClick)="onUnitClick($event)"
+    class="model-details__similar"
+  />
+
+</section>

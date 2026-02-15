@@ -1,0 +1,46 @@
+
+.all-units-page {
+  min-height: 100vh;
+  background-color: var(--gray-50);
+
+  &__header {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @media (max-width: 768px) {
+      padding: 0 1rem;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 18rem 1fr;
+    gap: 1.5rem;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+  }
+
+  &__sidebar {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__grid {
+    min-width: 0;
+  }
+
+  &__contact {
+    margin-top: 2rem;
+  }
+}

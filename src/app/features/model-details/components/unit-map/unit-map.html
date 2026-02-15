@@ -1,0 +1,36 @@
+<article class="unit-map">
+  <h2 class="unit-map__title">
+    {{ 'modelDetails.map.title' | transloco }}
+  </h2>
+
+  <figure class="unit-map__container">
+    <img
+      [src]="mapImageUrl()"
+      appImageFallback
+      alt="Unit location map"
+      class="unit-map__image"
+    />
+    
+    <!-- Video Button Overlay -->
+    <button
+      type="button"
+      class="unit-map__video-btn"
+      (click)="onViewVideo()"
+      aria-label="View video"
+    >
+      <div class="unit-map__video-icon">
+        <svg-icon name="project-details/play-button" class="unit-map__play-icon" />
+      </div>
+      <span class="unit-map__video-label">{{ 'modelDetails.map.video' | transloco }}</span>
+    </button>
+
+    <!-- Interactive Map Button -->
+    <button
+      type="button"
+      class="unit-map__interactive-btn"
+      (click)="onViewInteractiveMap()"
+    >
+      {{ 'modelDetails.map.interactiveMap' | transloco }}
+    </button>
+  </figure>
+</article>

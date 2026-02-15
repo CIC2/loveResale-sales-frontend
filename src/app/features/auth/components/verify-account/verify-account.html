@@ -1,0 +1,85 @@
+<section class="reset" aria-labelledby="verifyAccountTitle">
+  <!-- Left -->
+  <aside class="reset__left">
+    <figure class="reset__logo">
+      <img src="images/auth/login.png" alt="TMG Logo" />
+    </figure>
+
+    <div class="reset__bg">
+      <img
+        src="images/auth/reset-password.jpg"
+        class="reset__bg-img"
+        alt="Reset Password Illustration"
+      />
+      <div class="reset__overlay"></div>
+    </div>
+
+    <div class="reset__intro">
+      <h2 class="reset__title">
+        {{ "reset.sliderTitle" | transloco }}
+      </h2>
+      <p class="reset__desc">
+        {{ "reset.sliderDescription" | transloco }}
+      </p>
+    </div>
+  </aside>
+
+  <!-- Right -->
+  <div class="reset__right">
+    <header class="reset__header">
+      <h1 id="verifyAccountTitle" class="reset__header-title">
+        {{ "reset.title" | transloco }}
+      </h1>
+
+      <p class="reset__header-subtitle">
+        {{ "reset.codeSentTo" | transloco }}
+        {{ maskedContact }}
+      </p>
+    </header>
+
+    <form class="reset__form">
+      <div class="reset__form-group">
+        <p-inputotp
+          [formControl]="otp"
+          (keydown.space)="preventSpace($event)"
+          [integerOnly]="true"
+          [length]="6"
+          aria-label="OTP"
+        ></p-inputotp>
+      </div>
+
+      <div class="reset__resend">
+        {{ "reset.notReceived" | transloco }}
+        <a class="reset__resend-link" aria-label="Resend verification code">
+          {{ "reset.resend" | transloco }}
+        </a>
+      </div>
+
+      <p-button
+        fluid
+        type="button"
+        (click)="submit()"
+        [disabled]="loading()"
+        aria-label="Continue"
+      >
+        <span pButtonLabel>
+          {{
+            loading()
+              ? ("reset.loading" | transloco)
+              : ("reset.continue" | transloco)
+          }}
+        </span>
+      </p-button>
+    </form>
+
+    <footer class="reset__footer">
+      <i class="pi pi-angle-left reset__back-icon" aria-hidden="true"></i>
+      {{ "reset.backTo" | transloco }}
+      <p-button
+        [label]="'reset.signIn' | transloco"
+        link
+        (click)="openSignIn()"
+      ></p-button>
+    </footer>
+  </div>
+</section>

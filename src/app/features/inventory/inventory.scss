@@ -1,0 +1,16 @@
+.inventory {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--white);
+
+  &__header {
+    padding: 1.5rem 2.75rem;
+    background-color: var(--white);
+  }
+
+  &__table {
+    flex: 1;
+    padding: 0 2.75rem 1.5rem;
+  }
+}

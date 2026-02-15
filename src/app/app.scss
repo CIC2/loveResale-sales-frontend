@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+.global-loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.6); // semi-transparent backdrop
+  z-index: 9999; // ensure it's on top of everything
+}
+#zmmtg-root {
+  // position: fixed !important;
+  z-index: 1;
+}
+::ng-deep #wc-loading{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.6); // semi-transparent backdrop
+  z-index: 9999; // ensure it's on top of everything
+}

@@ -1,0 +1,23 @@
+<div class="about-project-sidebar">
+  <h2 class="about-project-sidebar__title">
+    {{ 'projectPage.about.title' | transloco }}
+  </h2>
+  
+  <div class="about-project-sidebar__list">
+    @for (item of infoItems(); track item.title) {
+      <div class="about-project-sidebar__item">
+        <div class="about-project-sidebar__icon-wrapper">
+          <svg-icon
+            [name]="item.icon"
+            [svgStyle]="{ width: '1.5rem', height: '1.5rem' }"
+            class="about-project-sidebar__icon"
+          />
+        </div>
+        <div class="about-project-sidebar__content">
+          <span class="about-project-sidebar__label">{{ item.title | transloco }}</span>
+          <span class="about-project-sidebar__value">{{ item.value | transloco }}</span>
+        </div>
+      </div>
+    }
+  </div>
+</div>

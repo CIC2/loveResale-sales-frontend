@@ -1,0 +1,11 @@
+ <div id="zmmtg-root"></div>
+  <div id="aria-notify-area"></div>
+@if (this.loadingService.loading()) {
+<div class="global-loader">
+  <p-progressSpinner></p-progressSpinner>
+</div>
+} @else {
+<p-toast />
+}
+
+<router-outlet />

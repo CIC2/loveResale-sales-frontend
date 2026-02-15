@@ -1,0 +1,13 @@
+.p-slider.p-slider-horizontal {
+  height: 0.375rem;
+  .p-slider-handle {
+    background: var(--secondary);
+
+    &::before {
+      background: var(--secondary);
+    }
+  }
+  .p-slider-range {
+    background: var(--secondary);
+  }
+}

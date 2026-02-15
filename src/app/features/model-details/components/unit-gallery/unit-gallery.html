@@ -1,0 +1,55 @@
+<section class="unit-gallery">
+  <div class="unit-gallery__container">
+    <!-- Main Image -->
+    <figure class="unit-gallery__main">
+      <img
+        src="/images/unit-details.png"
+        appImageFallback
+        alt="Unit main image"
+        class="unit-gallery__main-image"
+      />
+      
+      <!-- Share Button -->
+      <button
+        type="button"
+        class="unit-gallery__share-btn"
+        (click)="onShareClick()"
+        aria-label="Share"
+      >
+        <span>{{ 'modelDetails.gallery.share' | transloco }}</span>
+        <svg-icon name="arrow-right" class="unit-gallery__share-icon" />
+      </button>
+    </figure>
+
+    <!-- Thumbnails Grid -->
+    <div class="unit-gallery__thumbnails">
+      @for (image of thumbnailImages; track $index) {
+        <figure
+          class="unit-gallery__thumb"
+          [class.unit-gallery__thumb--active]="$index === selectedIndex()"
+          (click)="selectImage($index)"
+        >
+          <img
+            src="/images/unit-details.png"
+            appImageFallback
+            alt="Unit thumbnail"
+            class="unit-gallery__thumb-image"
+          />
+
+          <!-- Show all photos overlay on last thumbnail -->
+          @if ($index === 3 && totalPhotos > 4) {
+            <button
+              type="button"
+              class="unit-gallery__see-all"
+              (click)="onShowAllPhotos()"
+            >
+              <span>{{ 'modelDetails.gallery.seeAll' | transloco }}</span>
+              <span class="unit-gallery__photo-count">{{ totalPhotos }}</span>
+              <span>{{ 'modelDetails.gallery.photos' | transloco }}</span>
+            </button>
+          }
+        </figure>
+      }
+    </div>
+  </div>
+</section>

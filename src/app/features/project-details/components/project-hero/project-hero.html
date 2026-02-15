@@ -1,0 +1,20 @@
+<div class="project-hero">
+  <div class="project-hero__image-wrapper">
+    <img
+      [src]="imageUrl()"
+      [alt]="projectName()"
+      class="project-hero__image"
+    />
+    <div class="project-hero__overlay"></div>
+  </div>
+  
+  <div class="project-hero__content">
+    <p-breadcrumb
+      [model]="breadcrumbItems"
+      [home]="breadcrumbHome"
+      class="project-hero__breadcrumb"
+    />
+    
+    <h1 class="project-hero__title">{{ projectName() }}</h1>
+  </div>
+</div>

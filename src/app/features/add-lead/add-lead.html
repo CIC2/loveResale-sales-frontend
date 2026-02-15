@@ -1,0 +1,18 @@
+<main class="add-lead">
+  <!-- Header Section -->
+  <div class="add-lead__header">
+    <div class="add-lead__header-content">
+      <h1 class="add-lead__title">
+        {{ 'addLead.title' | transloco }}
+      </h1>
+    </div>
+  </div>
+
+  <!-- Form Section -->
+  <div class="add-lead__form">
+    <app-add-lead-form
+      (cancel)="onCancel()"
+      (submit)="onSubmit($event)"
+    />
+  </div>
+</main>

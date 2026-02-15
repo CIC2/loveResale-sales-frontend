@@ -1,0 +1,29 @@
+<main class="inventory">
+
+
+  <!-- Header Section -->
+  <div class="inventory__header">
+    <app-inventory-search-header
+      [typeOptions]="typeOptions()"
+      [projectOptions]="projectOptions()"
+      (search)="onSearch($event)"
+      (keywordClick)="onKeywordClick($event)"
+    />
+  </div>
+
+  <!-- Table Section -->
+  <div class="inventory__table">
+    <app-inventory-table
+      [units]="units()"
+      (statusClick)="onStatusClick($event)"
+    />
+  </div>
+
+  <!-- Sales Card Overlay -->
+  @if (showSalesCard() && selectedUnit()) {
+    <app-sales-card
+      [unit]="selectedUnit()!"
+      (close)="onCloseSalesCard()"
+    />
+  }
+</main>

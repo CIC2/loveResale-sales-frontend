@@ -1,0 +1,58 @@
+<section class="units-grid">
+  <!-- Results Count -->
+  <div class="units-grid__header">
+    <span class="units-grid__count">
+      {{ 'allUnits.grid.unitsFound' | transloco: { count: totalRecords() } }}
+    </span>
+  </div>
+
+  <!-- Loading State -->
+  @if (loading()) {
+    <div class="units-grid__loading">
+      <p-progressSpinner
+        strokeWidth="4"
+        styleClass="units-grid__spinner"
+      />
+      <span>{{ 'allUnits.grid.loading' | transloco }}</span>
+    </div>
+  } @else {
+    <!-- Units List -->
+    @if (units().length > 0) {
+      <div class="units-grid__list">
+        @for (unit of units(); track unit.id) {
+          <app-unit-card
+            [unit]="unit"
+            (favoriteClick)="onFavoriteClick($event)"
+            (cardClick)="onCardClick($event)"
+          />
+        }
+      </div>
+
+      <!-- Pagination -->
+      @if (totalRecords() > pageSize()) {
+        <div class="units-grid__pagination">
+          <p-paginator
+            [rows]="pageSize()"
+            [totalRecords]="totalRecords()"
+            [first]="currentPage() * pageSize()"
+            (onPageChange)="onPageChange($event)"
+            [showFirstLastIcon]="true"
+            [showCurrentPageReport]="true"
+            currentPageReportTemplate="{first} - {last} of {totalRecords}"
+          />
+        </div>
+      }
+    } @else {
+      <!-- Empty State -->
+      <div class="units-grid__empty">
+        <svg-icon name="search" class="units-grid__empty-icon"></svg-icon>
+        <h3 class="units-grid__empty-title">
+          {{ 'allUnits.grid.noResults' | transloco }}
+        </h3>
+        <p class="units-grid__empty-desc">
+          {{ 'allUnits.grid.noResultsDesc' | transloco }}
+        </p>
+      </div>
+    }
+  }
+</section>

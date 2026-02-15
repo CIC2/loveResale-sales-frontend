@@ -1,0 +1,18 @@
+<article class="unit-overview">
+  <h2 class="unit-overview__title">
+    {{ 'modelDetails.overview.title' | transloco }}
+  </h2>
+
+  <p class="unit-overview__description">
+    {{ displayText }}
+  </p>
+
+  @if (showExpandButton) {
+    <p-button
+      [label]="(isExpanded() ? 'modelDetails.overview.showLess' : 'modelDetails.overview.showMore') | transloco"
+      styleClass="unit-overview__expand-btn"
+      [outlined]="true"
+      (onClick)="toggleExpand()"
+    />
+  }
+</article>

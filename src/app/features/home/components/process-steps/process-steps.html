@@ -1,0 +1,79 @@
+<section class="process-steps">
+  <div class="process-steps__container">
+    <!-- Header -->
+    <div class="process-steps__header">
+      <div class="process-steps__header-left">
+        <h2 class="process-steps__title">
+          {{ 'home.processSteps.title' | transloco }}
+        </h2>
+
+        <!-- Tabs -->
+        <div class="process-steps__tabs">
+          <button
+            type="button"
+            class="process-steps__tab"
+            [class.process-steps__tab--active]="activeTab === 'buy'"
+            (click)="setActiveTab('buy')"
+          >
+            {{ 'home.processSteps.tabs.buyNewUnit' | transloco }}
+          </button>
+          <button
+            type="button"
+            class="process-steps__tab"
+            [class.process-steps__tab--active]="activeTab === 'sell'"
+            (click)="setActiveTab('sell')"
+          >
+            {{ 'home.processSteps.tabs.sellYourUnit' | transloco }}
+          </button>
+        </div>
+      </div>
+
+      <p class="process-steps__subtitle">
+        {{ 'home.processSteps.subtitle' | transloco }}
+      </p>
+    </div>
+
+    <!-- Steps Grid -->
+    <div class="process-steps__grid">
+      @for (step of steps; track step.number) {
+        <div class="step-card">
+          <div class="step-card__image">
+            <img 
+              src="/images/home-stepcard.jpg" 
+              [alt]="step.title | transloco"
+              class="step-card__bg"
+            />
+            <div class="step-card__overlay"></div>
+          </div>
+          
+          <div class="step-card__icon-wrapper">
+            <svg-icon 
+              [name]="step.icon" 
+              class="step-card__icon"
+            ></svg-icon>
+          </div>
+          
+          <h3 class="step-card__title">
+            {{ step.title | transloco }}
+          </h3>
+        </div>
+      }
+    </div>
+
+    <!-- CTA Button -->
+    <div class="process-steps__cta">
+      <p-button
+        [label]="'home.processSteps.seeAllProjects' | transloco"
+        styleClass="process-steps__cta-button"
+        [outlined]="true"
+      >
+        <ng-template pTemplate="icon">
+          <svg-icon 
+            name="arrow" 
+            class="process-steps__cta-icon"
+          ></svg-icon>
+        </ng-template>
+      </p-button>
+    </div>
+  </div>
+</section>

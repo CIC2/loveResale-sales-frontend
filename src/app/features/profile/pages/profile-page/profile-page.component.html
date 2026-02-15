@@ -1,0 +1,38 @@
+<section class="profile-page">
+  <div class="profile-page__hero">
+    <div class="profile-page__hero-inner">
+      <p-breadcrumb
+        [home]="heroBreadcrumbHome()"
+        [model]="heroBreadcrumbItems()"
+        styleClass="profile-page__breadcrumb"
+      />
+      <div class="profile-page__hero-row">
+        <div class="profile-page__hero-title">
+          <h1 class="profile-page__title">
+            {{ 'profile.account.title' | transloco }}
+          </h1>
+        </div>
+        <svg-icon
+          name="homefly-logo"
+          [svgClass]="'profile-page__logo'"
+          [attr.aria-label]="'profile.account.logoAlt' | transloco"
+        ></svg-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-page__content">
+    <div class="profile-page__content-inner">
+      <app-profile-sidebar
+        [sections]="sidebarSections()"
+        [activeKey]="activeItemKey"
+      />
+      <app-profile-form
+        [formGroup]="profileForm"
+        [breadcrumbItems]="formBreadcrumbItems()"
+        [genderOptions]="genderOptions()"
+        [nationalityOptions]="nationalityOptions()"
+      />
+    </div>
+  </div>
+</section>

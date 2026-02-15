@@ -1,0 +1,77 @@
+<section class="form__section">
+  <form [formGroup]="personalForm" class="form__body">
+    <!-- Full Name -->
+    <div class="form__group">
+      <label class="form__label" for="fullName">
+        {{ "personal.fullName" | transloco }}
+      </label>
+      <div>
+        <input
+          pInputText
+          [placeholder]="'personal.fullNamePlaceholder' | transloco"
+          type="text"
+          inputId="fullName"
+          formControlName="fullName"
+        />
+        <validation-error
+          [control]="personalForm.controls['fullName']"
+        ></validation-error>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form__group">
+      <label class="form__label" for="email">
+        {{ "personal.email" | transloco }}
+      </label>
+      <div>
+        <input
+          pInputText
+          [placeholder]="'personal.emailPlaceholder' | transloco"
+          type="text"
+          inputId="email"
+          formControlName="email"
+        />
+        <validation-error
+          [control]="personalForm.controls['email']"
+        ></validation-error>
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="form__group">
+      <label class="form__label">
+        {{ "personal.phoneNumber" | transloco }}
+      </label>
+      <mobile-number-input aria-label="Phone Number"></mobile-number-input>
+    </div>
+
+    <!-- Address -->
+    <div class="form__group">
+      <label class="form__label" for="address">
+        {{ "personal.address" | transloco }}
+        <span class="optional"> ({{ "personal.optional" | transloco }}) </span>
+      </label>
+
+      <input
+        pInputText
+        [placeholder]="'personal.addressPlaceholder' | transloco"
+        type="text"
+        inputId="address"
+        formControlName="address"
+      />
+
+      <validation-error
+        [control]="personalForm.controls['address']"
+      ></validation-error>
+    </div>
+  </form>
+
+  <p-button
+    (click)="nextStep()"
+    aria-label="Next Step"
+    fluid
+    [label]="'personal.next' | transloco"
+  >
+  </p-button>
+</section>

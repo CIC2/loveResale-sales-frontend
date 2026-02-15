@@ -1,0 +1,10 @@
+.p-button-text,
+.p-button-link {
+    padding: 0.2rem;
+}
+
+p-button {
+    .p-button-label {
+        width: max-content;
+    }
+}

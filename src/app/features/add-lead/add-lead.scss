@@ -1,0 +1,28 @@
+.add-lead {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--white);
+
+  &__header {
+    padding: 1.5rem 2.75rem;
+    background-color: var(--gray-200);
+  }
+
+  &__header-content {
+    max-width: 89rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: var(--font-size-5);
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0;
+  }
+
+  &__form {
+    flex: 1;
+    padding: 0 2.75rem 1.5rem;
+  }
+}

@@ -1,0 +1,1556 @@
+{
+  "lang": "عربي",
+  "close": "Close",
+  "cancel": "Cancel",
+  "done": "Done",
+  "appointments": "Appointments",
+  "myInfo": "My Info",
+  "reservedUnits": "My Offers",
+  "join": "Join",
+  "appAlreadyScheduled": "Appointment already scheduled",
+  "confirmedApp": "Your appointment is confirmed",
+  "confirmedAppDesc": "We’ve successfully scheduled your appointment for",
+  "appAlreadyScheduledDesc": "You already have an appointment booked for",
+  "cannotSchedule": "You can’t schedule another one or join the queue at this time.",
+  "meetingSales": "Meet with a Sales Expert",
+  "meetingSalesDesc": "All our sales experts are currently assisting other customers. We’ll connect you shortly.",
+  "readyMeeting": "Your meeting is ready. ",
+  "readyMeetingDesc": "You’re already connected.",
+  "yes": "Yes",
+  "no": "No",
+  "common": {
+    "home": "Home",
+    "search": "Search",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "comparison": {
+    "finishing": "finishingEn",
+    "modelName": "modelName",
+    "projectName": "projectName"
+  },
+  "purchaseReason": {
+    "title": "Tell Us About Your Purchase",
+    "reason": "Reason for Purchase?",
+    "subReasonInvestment": "Type of investment?",
+    "subReasonFamilyMember": "Family Member?"
+  },
+
+  "sort": {
+    "priceAsc": "Lowest Price First",
+    "priceDesc": "Highest Price First"
+  },
+  "viewOptions": {
+    "grid": "Grid",
+    "list": "List"
+  },
+  "unitCard": {
+    "carouselIndicators": "Image carousel indicators",
+    "propertyDetails": "Property details",
+    "beds": "Bedrooms",
+    "bedroom": "Bedroom",
+    "bathroom": "Bathroom",
+    "baths": "Bathrooms",
+    "squareMeter": "m²",
+    "startingFrom": "Starting From",
+    "viewDetails": "View property details"
+  },
+  "onlineSales": {
+    "brand": "Talaat Moustafa Group",
+    "heading": "Online Sales in Numbers",
+    "description": "A leading conglomerate with a special emphasis on real estate development, and an outstanding track record of creating large, vibrant.",
+    "stats": {
+      "transactions": {
+        "label": "Online Transactions",
+        "value": "Online Transactions"
+      },
+      "retail": { "label": "Retail Purchases", "value": "Retail Purchases" },
+      "inquiries": {
+        "label": "Customer Inquiries",
+        "value": "Customer Inquiries"
+      },
+      "subscriptions": {
+        "label": "New Subscriptions",
+        "value": "New Subscriptions"
+      },
+      "events": {
+        "label": "Event Registrations",
+        "value": "Event Registrations"
+      },
+      "requests": { "label": "Service Requests", "value": "Service Requests" }
+    }
+  },
+  "searchFlow": {
+    "steps": {
+      "start": {
+        "title": "Start Your Search",
+        "desc": "Browse listings in your desired location"
+      },
+      "filters": {
+        "title": "Apply Filters",
+        "desc": "Use filters to find the unit that fits your needs"
+      },
+      "reserve": {
+        "title": "Reserve Your Unit",
+        "desc": "Book the property you want instantly now"
+      },
+      "receive": {
+        "title": "Receive Your Keys",
+        "desc": "Get your unit with full support and ease"
+      }
+    }
+  },
+  "currencies": {
+    "EGP": "EGP",
+    "USD": "USD",
+    "EUR": "EUR",
+    "SAR": "SAR",
+    "AED": "AED"
+  },
+  "reservations": {
+    "getReady": "Get Ready",
+    "heading": "Available for Reservation",
+    "description": "A leading conglomerate with a special emphasis on real estate development and a strong track record of large-scale projects.",
+    "availableUnits": "Available Units",
+    "reserveNow": "Reserve Now",
+    "projects": {
+      "southmed": {
+        "title": "SouthMED",
+        "description": "A new global destination rising on the Mediterranean."
+      },
+      "madinaty": {
+        "title": "Madinaty",
+        "description": "A fully integrated community offering a modern lifestyle."
+      },
+      "noor": {
+        "title": "Noor Smart City",
+        "description": "The first integrated smart city exemplifying the perfect blend of modernity and sustainability."
+      }
+    }
+  },
+  "branches": {
+    "tmgGroup": "Talaat Moustafa Group",
+    "heading": "Our Branches in Egypt",
+    "description": "Talaat Moustafa Group operates across key cities and destinations nationwide. Our branches are strategically located to provide clients with direct access to our real estate services, project consultations, and personalized support. Visit us to explore our developments and discover how we're building the future of living in Egypt.",
+    "viewLocation": "View Location",
+    "workingHours": "Daily from 10 am – 10 pm"
+  },
+  "contact": {
+    "heading": "Contact Our Team of Experts",
+    "descriptionMobile": "Whether you're interested in learning more about our iconic developments, exploring residential or commercial investment opportunities, or have specific questions about one of our communities, we're here to help.",
+    "descriptionDesktop": "Whether you're interested in learning more about our iconic developments, exploring residential or commercial investment opportunities, or have specific questions about one of our communities, we're here to help. At Talaat Moustafa Group, we value every inquiry and strive to provide you with a seamless and personalized experience. Fill out the form below and one of our dedicated team members will reach out to assist you with the information and guidance you need.",
+    "formHeading": "Get in Touch",
+    "formDescription": "Whether you have questions, need more information, or simply want to connect with us, we're here to help. Fill out the form below and a member of our team will get back to you as soon as possible.",
+    "name": "Name",
+    "namePlaceholder": "Fill Your Full Name",
+    "phoneNumber": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "emailAddress": "Email Address",
+    "emailPlaceholder": "Enter your email",
+    "reasonOfContacting": "Reason of Contacting",
+    "reasonPlaceholder": "Choose Your Reason",
+    "country": "Country",
+    "countryPlaceholder": "Choose Your Country",
+    "branch": "Branch",
+    "branchPlaceholder": "Choose A Branch",
+    "message": "Message",
+    "messagePlaceholder": "leave your message here",
+    "send": "Send",
+    "submit": "Submit",
+    "reasonGeneralInquiry": "General Inquiry",
+    "reasonPropertyInquiry": "Property Inquiry",
+    "reasonInvestment": "Investment Opportunity",
+    "reasonSupport": "Customer Support",
+    "countryEgypt": "Egypt",
+    "countryUAE": "United Arab Emirates",
+    "countrySaudi": "Saudi Arabia",
+    "countryKuwait": "Kuwait",
+    "countryOther": "Other",
+    "branchCairo": "Cairo",
+    "branchAlexandria": "Alexandria",
+    "branchNorthCoast": "North Coast",
+    "branchNewCapital": "New Administrative Capital"
+  },
+  "blog": {
+    "blog": "Blog",
+    "description": "Whether you're interested in learning more about our iconic developments, exploring residential or commercial investment opportunities, or have specific questions about one of our communities, we’re here to help.",
+    "tmgGroup": "Talaat Moustafa Group Blog",
+    "Check": "Check Our Latest News & Events",
+    "recentlyUpdated": "Recently Updated",
+    "allArticles": {
+      "title": "All Articles",
+      "description": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless. Explore verified listings, connect with our sales team, and close deals with confidence—all in one place."
+    },
+    "contactForm": {
+      "titleLine1": "We're Here to Help",
+      "titleLine2": "You Buy or Sell",
+      "description": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless. Explore verified listings, connect with our sales team, and close deals with confidence—all in one place.",
+      "name": "Name",
+      "namePlaceholder": "Ahmad",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "emailPlaceholder": "ahmad@gmail.com",
+      "message": "Message",
+      "messagePlaceholder": "Leave your message here",
+      "submit": "Submit"
+    },
+    "blogDetails": {
+      "tMGIntroduces": "TMG Introduces a New Project in Musqat, Oman",
+      "description": "Nestled in a very prime location on the Southern Mediterranean at the opulent Egyptian North Coast shoreline, SouthMED is perfectly situated at kilo 105 on the Alexandria-Matrouh Road, offering easy accessibility, in addition to enjoying global proximity by flight distance of 2-3 hours from European and Gulf countries."
+    }
+  },
+
+  "profile": {
+    "title": "My Profile",
+    "account": {
+      "title": "My Account",
+      "logoAlt": "Homefly logo",
+      "breadcrumbs": {
+        "account": "My Account",
+        "profile": "Profile",
+        "personalInfo": "Personal Info"
+      }
+    },
+    "menu": {
+      "profile": "Profile",
+      "personalInfo": "Personal Info",
+      "sellerProfile": "Seller Profile",
+      "appointments": "My Appointments",
+      "units": "Units",
+      "myUnits": "My Units",
+      "reservedUnits": "Reserved Units",
+      "settings": "Settings",
+      "notifications": "Notifications",
+      "security": "Security"
+    },
+    "form": {
+      "title": "Personal Info",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phoneNumber": "Phone Number",
+      "phoneNumberOptional": "Phone Number",
+      "emailAddress": "Email Address",
+      "birthDate": "Birth Date",
+      "nationality": "Nationality",
+      "gender": {
+        "label": "Gender",
+        "male": "Male",
+        "female": "Female"
+      },
+      "optional": "Optional",
+      "placeholders": {
+        "firstName": "Enter your first name",
+        "lastName": "Enter your last name",
+        "phoneNumber": "Enter your phone number",
+        "emailAddress": "Enter your email address",
+        "birthDate": "Select your birth date",
+        "nationality": "Select nationality",
+        "gender": "Select gender"
+      },
+      "nationalities": {
+        "egyptian": "Egyptian",
+        "other": "Other"
+      }
+    },
+
+    "notice": "As a new customer, you can only edit your personal information until an offer is generated on your account.",
+
+    "upload": "Upload",
+    "avatarAlt": "Profile picture",
+
+    "tmgId": "TMG ID",
+
+    "tabs": {
+      "myInfo": "My Info",
+      "appointments": "Appointments",
+      "reservedUnits": "Reserved Units"
+    },
+
+    "completion": {
+      "label": "Profile",
+      "subLabel": "Completion"
+    },
+
+    "actions": {
+      "edit": "Edit",
+      "cancel": "Cancel",
+      "save": "Save"
+    },
+
+    "newCustomer": {
+      "question": "Are you a new customer?",
+      "projects": "Select Your Projects"
+    },
+
+    "myInfo": {
+      "personalInfo": "Personal Info",
+      "name": "Full Name",
+      "phoneNumber": "Phone Number",
+      "emailAddress": "Email Address",
+      "gender": "Gender",
+      "genderPlaceholder": "Select Gender",
+      "nationality": "Nationality",
+      "nationalityPlaceholder": "Select Nationality",
+
+      "addressInfo": "Address Info",
+      "address": "Address",
+      "country": "Country",
+      "countryPlaceholder": "Select Country"
+    },
+
+    "placeholders": {
+      "fullName": "Enter your full name",
+      "phone": "Enter your phone number",
+      "email": "Enter your email address",
+      "address": "Enter your address"
+    },
+
+    "reservedUnits": {
+      "projectName": "Project",
+      "offerNumber": "Offer Number",
+      "unitNumber": "Unit Number",
+      "reservationAmount": "Reservation Amount",
+      "remainingTime": "Time Remaining",
+      "orderDate": "Order Date",
+      "orderTime": "Order Time",
+      "status": "Status",
+      "paymentPlan": "Payment Plan",
+      "actions": "Actions",
+
+      "offers": {
+        "PROC": "In Process",
+        "DOWN": "Down Payment",
+        "SOLD": "Sold",
+        "OREJ": "Rejected"
+      }
+    }
+  },
+
+  "breadcrumbs": {
+    "projects": "Projects"
+  },
+  "projectDetails": {
+    "facilities": {
+      "subtitle": "The Real Mediterranean",
+      "titlePrefix": "Facilities in",
+      "description": "Immerse yourself in the charm of the region and enjoy a world-class lifestyle, integrated amenities, unique beachfront activities, crystal swimmable lagoons, exquisite dining, breathtaking views, and many more.",
+      "items": {
+        "healthWellness": "Health & Wellness",
+        "shoppingEntertainment": "Shopping & Entertainment",
+        "southmedHospitality": "SouthMED Hospitality",
+        "golfCourses": "Golf Courses",
+        "crystalLagoons": "Crystal Lagoons",
+        "theMarina": "The Marina"
+      }
+    },
+    "features": {
+      "subtitle": "The Real Mediterranean",
+      "titleSuffix": "Features",
+      "description": "Immerse yourself in the charm of the region and enjoy a world-class lifestyle, integrated amenities, unique beachfront activities, crystal swimmable lagoons, exquisite dining, breathtaking views, and many more.",
+      "items": {
+        "millionSqmFeaturing": "Million SQM Featuring",
+        "swimmableLagoons": "Swimmable Lagoons",
+        "holeSignatureGolfCourse": "Hole Signature Golf Course",
+        "stunningWaterfrontPromenade": "Stunning Waterfront Promenade",
+        "panoramicViewsMediterranean": "Panoramic Views Overlooking the Mediterranean",
+        "sandyBeachesBreathtakingViews": "Sandy Beaches and Breathtaking Views"
+      }
+    },
+    "actions": {
+      "reserveNow": "Reserve Now",
+      "reserveAlt": "Reserve Icon",
+      "contactSalesman": "Contact Salesman",
+      "contactAlt": "Contact Icon",
+      "searchAlt": "Search",
+      "exploreModels": "Explore Models"
+    },
+    "intro": {
+      "heroAlt": "Golf Course",
+      "titleLine1": "A New Global Destination",
+      "titleLine2": "Rising on the Mediterranean",
+      "description": "Nestled in a very prime location on the Southern Mediterranean at the opulent Egyptian North Coast shoreline, SouthMED is perfectly situated at Kilo 195 on the Alexandria-Matrouh Road, offering easy accessibility. In addition to enjoying global proximity by flight distance of 2-3 hours from European and Gulf countries."
+    },
+    "about": {
+      "subtitle": "The Real Mediterranean",
+      "headingPrefix": "About",
+      "tagline": "A New Global Destination Rising on the Mediterranean",
+      "p1": "An internationally designed fully integrated development spanning over an area of 23 million square meters of land.",
+      "p2": "Nestled in a very prime location on the Southern Mediterranean at the opulent Egyptian North Coast shoreline, SouthMED is perfectly situated at Kilo 165 on the Alexandria-Matrouh Road, offering easy accessibility. In addition to enjoying global proximity by flight distance of 2-5 hours from European and Gulf countries. For added convenience, the Al Alamien International Airport is just an 18-minute drive away, ensuring seamless travel connections for residents and visitors alike.",
+      "imageAlt": "About SouthMED"
+    },
+    "gallery": {
+      "subtitle": "The Real Mediterranean",
+      "titleSuffix": "Gallery",
+      "description": "Immerse yourself in the charm of the region and enjoy a world-class lifestyle, integrated amenities, unique beachfront activities, crystal swimmable lagoons, exquisite dining, breathtaking views, and many more.",
+      "imgAlt1": "Gallery Image 1",
+      "imgAlt2": "Gallery Image 2",
+      "imgAlt3": "Gallery Image 3",
+      "imgAlt4": "Gallery Image 4",
+      "imgAlt5": "Gallery Image 5",
+      "imgAlt6": "Gallery Image 6",
+      "imgAlt7": "Gallery Image 7",
+      "imgAlt8": "Gallery Image 8",
+      "imgAlt9": "Gallery Image 9"
+    },
+    "reservation": {
+      "subtitle": "We're Here to Help",
+      "titlePrefix": "Reserve Your Model in",
+      "description": "Have questions or ready to take the next step? Reserve now or contact a sales representative to guide you through the details."
+    },
+    "unitTypes": {
+      "subtitle": "The Real Mediterranean",
+      "titleSuffix": "Unit Types",
+      "description": "Choose from luxury villas, signature homes, and modern apartments at SouthMED."
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About us",
+      "description": "Whether you're interested in learning more about our iconic developments, exploring residential or commercial investment opportunities, or have specific questions about one of our communities, we’re here to help."
+    },
+    "tmg": {
+      "sectionLabel": "ABOUT US",
+      "title": "Talaat Moustafa Group",
+      "p1": "Talaat Moustafa Group, a leading Egyptian real estate developer, boasts a remarkable track record. TMG's integrated communities offer self-sufficient, modern housing for over a million residents, situated within environmentally-green cities, plus upscale hotels and resorts that have reshaped Egypt's urban and tourism landscapes. Its unprecedented development philosophy has redefined modern living and contributed to Egypt's growth.",
+      "p2": "Driven by a sharp vision and a unique philosophy, TMG has shaped the urban landscape by developing insignificant, self-sustained cities & communities, and an array of residential, commercial, and hospitality projects nationwide. TMG excels at creating a unique template for community living and is dedicated to maintaining the highest quality of standards while continually striving to lead a new future-proof way of life with people at its core.",
+      "p3": "TMG's portfolio is filled with a plethora of noteworthy projects, being the developer of 'Al Rehab city' in New Cairo, which represented a revolution in the outskirts living concept, followed by the flagship mega-project 'Madinaty' developed over 8000 feddans to introduce a new approach of life integration with international standards, and the unique project in the heart of the new capital 'Celia'."
+    },
+    "watchLearnGrow": {
+      "watch": "Watch",
+      "learn": "Learn",
+      "grow": "Grow"
+    },
+    "trustPartner": {
+      "titleLine1": "Your Trust",
+      "titleLine2": "Real Estate Partner",
+      "items": {
+        "portfolio": {
+          "title": "Strong Portfolio Presentation",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      }
+    },
+    "timeline": {
+      "heading": "Years of Achievement",
+      "slideTitle": "TMG launched SouthMED project",
+      "slideDescription": "In the southern Mediterranean in partnership with the Egyptian government with investments amounting to one trillion pounds, equivalent to about 21 billion dollars, which will represent a turning point in the history of the life of the largest real estate developer on the local and regional scene, as it is a new global destination that rivals the most luxurious and upscale global destinations located in the northern Mediterranean, such as the beaches and cities of southern France, Italy, Spain and Greece",
+      "imageAlt": "Marina image"
+    },
+    "mvv": {
+      "sectionLabel": "About TMG",
+      "sectionTitle": "Our Mission & Vision",
+      "title": "Talaat Moustafa Group",
+      "exploreMore": "Explore More",
+      "readMore": "Read More",
+      "mission": {
+        "title": "Our Mission",
+        "description": "TMG Is Committed To Create A Distinctive Lifestyle For Modern Communities And Tourism Destinations In Egypt And Overseas, Providing Employees With Opportunities To Contribute To The Development And Success Of Our Communities."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "Tmg Aspires To Become The Customers First Choice In The Real-Estate And Tourism Industries Nationally And Globally, Providing Our Clients A Great Quality Of Life. While Maintaining A Long-Term Relation With Our Shareholders Believing That They Are Our Partners Of Success, Providing Them A Rapid Investments Growth."
+      },
+      "values": {
+        "title": "Our Values",
+        "description": "We operate with unwavering integrity and credibility, ensuring transparency and trust in all our relationships. Our commitment to quality drives us to deliver excellence across every project and service. With a strong customer-first mindset, we listen, respond, and tailor solutions that meet real needs."
+      }
+    },
+    "familyCta": {
+      "titleLine1": "Where every family",
+      "titleLine2": "finds its home",
+      "description": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless. Explore verified listings, connect with our sales team, and close deals with confidence—all in one place.",
+      "learnMore": "Know More About us"
+    },
+    "contactForm": {
+      "titleLine1": "We're Here to Help",
+      "titleLine2": "You Buy or Sell",
+      "description": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless. Explore verified listings, connect with our sales team, and close deals with confidence—all in one place.",
+      "name": "Name",
+      "namePlaceholder": "Ahmad",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "emailPlaceholder": "ahmad@gmail.com",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here",
+      "submit": "Submit"
+    },
+    "statistics": {
+      "brand": "Talaat Moustafa Group",
+      "heading": "TMG in Numbers",
+      "description": "Talaat Moustafa Group, a leading Egyptian real estate developer, boasts a remarkable track record. TMG’s integrated communities offer self-sufficient, modern housing for over a million residents.",
+      "units": {
+        "mnsqm": "MN SQM"
+      },
+      "items": {
+        "yearsOfSuccess": "Years of Success",
+        "accumulatedFootprint": "Of Accumulated Footprint",
+        "developedLand": "MN SQM Developed Land",
+        "residentsAcross": "Residents Across Properties",
+        "unitsDelivered": "Units Delivered"
+      }
+    }
+  },
+  "auth": {
+    "sliderTitle": "Luxury Meets Convenience",
+    "sliderDescription": "Experience beautifully designed compounds with all amenities you need, from leisure to green spaces.",
+
+    "welcomeTitle": "Welcome back to TMG!",
+    "welcomeSubtitle": "Sign in your account",
+
+    "phoneLabel": "Phone number",
+
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+
+    "forgetPassword": "Forget Password?",
+
+    "signIn": "Sign in",
+    "loading": "Loading...",
+
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign Up"
+  },
+
+  "forget": {
+    "sliderTitle": "Endless Lifestyle Choices",
+    "sliderDescription": "From luxury villas to modern apartments, find a home that perfectly matches your needs.",
+
+    "title": "Forgot Password?",
+    "subtitle": "Don’t worry, we’ll guide you to reset your password.",
+
+    "phoneLabel": "Phone number",
+
+    "resetPassword": "Reset Password",
+    "loading": "Loading...",
+
+    "backTo": "Back To",
+    "signIn": "Sign in"
+  },
+
+  "reset": {
+    "sliderTitle": "Trusted Legacy of Excellence",
+    "sliderDescription": "Benefit from decades of experience delivering high-quality developments across Egypt.",
+
+    "title": "Verify Account",
+    "codeSentTo": "We have sent a verification code to",
+
+    "notReceived": "Didn’t receive the code?",
+    "resend": "Resend",
+
+    "continue": "Continue",
+    "loading": "Loading...",
+
+    "backTo": "Back to",
+    "signIn": "Sign In"
+  },
+  "newPassword": {
+    "sliderTitle": "Seamless Community Living",
+    "sliderDescription": "Enjoy integrated facilities, green spaces, and lifestyle services designed for modern families.",
+
+    "title": "Set new password",
+    "passwordRules": "Password must contain (upper case - lower case - number - special character - at least 8 characters.)",
+
+    "newPasswordLabel": "New Password",
+    "newPasswordPlaceholder": "Enter your new password",
+    "confirmPasswordLabel": "Confirm Password",
+    "confirmPasswordPlaceholder": "Confirm your new password",
+    "resetPassword": "Reset Password",
+    "backTo": "Back To",
+    "signIn": "Sign In"
+  },
+  "personal": {
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your Full Name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your Email",
+    "phoneNumber": "Phone Number",
+    "address": "Address",
+    "addressPlaceholder": "Enter your Address",
+    "optional": "optional",
+    "next": "Next"
+  },
+
+  "account": {
+    "nationality": "Nationality",
+    "nationalityPlaceholder": "Select a Nationality",
+
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Confirm your Password",
+    "agreeWith": "I Agree with the",
+    "terms": "Terms & Conditions",
+    "signUp": "Sign Up"
+  },
+
+  "validation": {
+    "email": {
+      "required": "Email is Required",
+      "email": "Please Enter Valid Email",
+      "pattern": "Please Enter Valid Email"
+    },
+    "education": {
+      "required": "Education is Required"
+    },
+    "area": {
+      "required": "Area is Required"
+    },
+    "gender": {
+      "required": "Gender is Required"
+    },
+    "fullName": {
+      "required": "Full Name is Required",
+      "pattern": "Full name must contain only letters and spaces.",
+      "maxlength": "Full Name must not exceed 100 characters."
+    },
+    "fullNameProfile": {
+      "required": "Full Name is Required",
+      "pattern": "Enter first and last name in Arabic with one space.",
+      "nonEgyptian": "Enter first and last name with one space."
+    },
+    "identifier": {
+      "required": "Phone number is Required",
+      "wrongNumber": "Please Enter Valid Mobile Number"
+    },
+    "password": {
+      "required": "Password is Required",
+      "pattern": "Password must contain (upper case - lower case - number - special character - least 8 characters.)"
+    },
+    "newPassword": {
+      "required": "Password is Required",
+      "pattern": "Password must contain (upper case - lower case - number - special character - least 8 characters.)"
+    },
+    "repeatPassword": {
+      "required": "Please confirm your password",
+      "mismatch": "Passwords do not match"
+    },
+    "confirmPassword": {
+      "required": "Please confirm your password",
+      "mismatch": "Passwords do not match"
+    },
+    "phoneNumber": {
+      "required": "Phone number is Required",
+      "wrongNumber": "Please Enter Valid Mobile Number"
+    },
+    "mobile": {
+      "required": "Phone number is Required",
+      "wrongNumber": "Please Enter Valid Mobile Number"
+    },
+    "address": {
+      "minlength": "Address must be at least 5 characters.",
+      "maxlength": "Address must not exceed 200 characters."
+    },
+    "otp": {
+      "required": "OTP is Required",
+      "minlength": "Must be exactly 6 characters"
+    },
+    "nationality": {
+      "required": "Nationality is Required"
+    },
+    "nationalId": {
+      "required": "National ID is Required",
+      "pattern": "Must be exactly 14 digits (numbers)"
+    },
+    "passportNumber": {
+      "required": "Passport number is required",
+      "pattern": "Must be 6 to 30 characters (letters or numbers)"
+    },
+    "location": {
+      "required": "Location is required"
+    },
+    "projectIds": {
+      "required": "Project is required"
+    },
+    "isMarried": {
+      "required": "Marital status is required"
+    },
+    "country": {
+      "required": "Country is required"
+    },
+    "selectedLang": {
+      "required": "Language is required"
+    },
+    "dateControlScheduleMeeting": {
+      "required": "Date & Time selections are required"
+    }
+  },
+  "terms": {
+    "title": "Terms and Conditions"
+  },
+
+  "header": {
+    "nav": {
+      "home": "Home",
+      "findProperty": "Find Your Property",
+      "sellProperty": "Sell Your Property",
+      "inventory": "Inventory",
+      "addLead": "Add Lead",
+      "favorites": "Favorites",
+      "projects": "Projects",
+      "about": "About us",
+      "blog": "Blog",
+      "contact": "Contact us"
+    },
+    "actions": {
+      "loginRegister": "Login / Register",
+      "arabic": "عربي"
+    },
+    "lang": "عربي",
+    "login": "Login",
+    "logout": "Log Out",
+    "myProfile": "My Profile",
+    "referral": "Referral",
+    "myAppointment": "My Appointment"
+  },
+  "hero": {
+    "city": "Capital Gardens",
+    "title": "{{project}} Smart City",
+    "description": "The first integrated smart city {{project}} exemplifies the perfect blend of modernity, sustainability, and convenience, strategically located next to the New Administrative Capital.",
+    "reserveNow": "Reserve Now",
+    "imageAlt": "Project image"
+  },
+
+  "projects": {
+    "capitalGardens": "Capital Gardens",
+    "madinaty": "Madinaty",
+    "southmed": "SouthMED",
+    "noor": "Noor"
+  },
+
+  "heroSearch": {
+    "imageAlt": "Project image",
+    "projects": {
+      "southmed": {
+        "title": "SouthMED",
+        "description": "A new global destination rising on the Mediterranean."
+      },
+      "capitalGardens": {
+        "title": "Capital Gardens",
+        "description": "An integrated residential city blending modernity and sustainability."
+      },
+      "madinaty": {
+        "title": "Madinaty",
+        "description": "A fully integrated community offering a modern lifestyle."
+      }
+    },
+    "form": {
+      "location": "Location",
+      "locationPlaceholder": "Select Location",
+      "project": "Project",
+      "projectPlaceholder": "Select Project",
+      "propertyType": "Property Type",
+      "propertyTypePlaceholder": "Select Property Type",
+      "unitArea": "Unit Area",
+      "search": "Search"
+    }
+  },
+
+  "unitDetails": {
+    "description": "Experience laid-back luxury in {{usageType}}, featuring {{bedrooms}} bedrooms and {{bathrooms}} bathrooms with a size of {{size}} m².",
+    "loading": "Loading unit details...",
+
+    "actions": {
+      "addToComparison": "Add to Comparison",
+      "downloadBrochure": "Download Brochure",
+      "viewProject": "View Project"
+    },
+
+    "modelDetails": {
+      "title": "Model Details",
+      "modelType": "Model Type",
+      "deliveryDate": "Delivery Date",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "size": "Model Size",
+      "location": "Location",
+      "floor": "Floor"
+    },
+
+    "modelFeatures": {
+      "title": "Model Features",
+      "club": "Club",
+      "storage": "Storage",
+      "garage": "Garage",
+      "ac": "Air Conditioning"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "search": "Search"
+    }
+  },
+  "modelDetails": {
+    "gallery": {
+      "mainAlt": "Unit main image",
+      "thumbAlt": "Unit thumbnail image"
+    },
+
+    "consult": {
+      "title": "Connect to Property Consultant",
+      "description": "Join the queue or schedule a time. Either way, you'll receive a Zoom link to meet a sales representative.",
+      "callNow": "Call Now",
+      "scheduleMeeting": "Schedule a Meeting"
+    },
+
+    "video": {
+      "thumbAlt": "Project video thumbnail",
+      "playAlt": "Play video"
+    }
+  },
+
+  "breadcrumbs": {
+    "home": "Home",
+    "search": "Search"
+  },
+
+  "meetExpert": {
+    "title": "Meet with a Sales Expert",
+    "subtitle": "Proceed with instant booking. Reserve now to secure your unit immediately.",
+
+    "queueMessage": "All our sales experts are currently busy. You’ve been placed {{position}} in the queue and will be connected shortly.",
+
+    "status": {
+      "ringing": "Please wait for a sales representative to join.",
+      "rejected": "Call rejected"
+    },
+
+    "language": {
+      "title": "Select Language",
+      "placeholder": "Select a language"
+    },
+
+    "actions": {
+      "startMeeting": "Start Meeting",
+      "cancel": "Cancel"
+    }
+  },
+
+  "mobileApp": {
+    "ready": "Ready to Reserve?",
+    "download": "Download VSO Mobile App now",
+    "description": "A leading conglomerate with a special emphasis on real estate development, and an outstanding track record of creating large-scale projects.",
+    "googlePlay": "Google Play",
+    "appStore": "App Store",
+    "imageAlt": "VSO Mobile Application"
+  },
+
+  "footer": {
+    "logoAlt": "TMG Logo",
+    "description": "Homefly - Your trusted partner in finding and selling properties. We make buying, selling, and renting effortless.",
+    "socialAlt": "Social media icon",
+
+    "sections": {
+      "projects": "Projects",
+      "developers": "Developers",
+      "locations": "Locations",
+      "company": "Company"
+    },
+
+    "links": {
+      "home": "Home",
+      "search": "Search",
+      "projects": "Projects",
+      "about": "About",
+      "contact": "Contact Us"
+    },
+
+    "actions": {
+      "contactSales": "Contact Salesman",
+      "bookAppointment": "Book Appointment",
+      "sendQuestion": "Send your Question",
+      "checkOrders": "Check your Orders"
+    },
+
+    "copyright": "2025 © Talaat Moustafa Group. All rights reserved.",
+
+    "reserve": {
+      "title": "Reserve Your Unit",
+      "desc": "Book the property you want instantly now"
+    },
+
+    "receive": {
+      "title": "Receive Your Keys",
+      "desc": "Get your unit with full support and ease"
+    }
+  },
+
+  "searchFilter": {
+    "title": "Search for your Model",
+    "desc": "Refine results by type, price, and features",
+
+    "selectedProjects": "Selected Projects:",
+    "mapAlt": "Map View",
+
+    "modelFound": "{{count}} Units Found",
+
+    "views": {
+      "mapView": "Map View",
+      "cardView": "Cards View"
+    },
+
+    "fields": {
+      "location": "Location",
+      "locationPlaceholder": "Select Location",
+
+      "project": "Project",
+      "projectPlaceholder": "Select Project",
+
+      "propertyType": "Property Type",
+      "propertyTypePlaceholder": "Select Property Type",
+
+      "unitArea": "Unit Area",
+
+      "model": "Model",
+      "modelPlaceholder": "Select Model",
+
+      "bathrooms": "Bathrooms",
+      "bathroomsPlaceholder": "Select Bathrooms",
+
+      "bedrooms": "Bedrooms",
+      "bedroomsPlaceholder": "Select Bedrooms",
+
+      "floors": "Floors",
+      "floorsPlaceholder": "Select Floors",
+
+      "delivery": "Delivery Year",
+      "deliveryPlaceholder": "Select Delivery Year"
+    }
+  },
+
+  "searchResults": {
+    "selectedProjects": "Selected Projects:",
+    "mapView": "Map View",
+    "cardView": "Cards View",
+    "loading": "Loading",
+    "mapAlt": "Map View",
+    "modelFound": "{{count}} Units Found",
+    "noResults": "No properties found matching your criteria"
+  },
+
+  "nomination": {
+    "title": "Referral",
+    "titleHighlight": "& Earn Exclusive Rewards!",
+    "subtitle": "Recommend a potential buyer and enjoy special benefits as a valued member of our community.",
+    "titleSuccess": "Nomination Submitted Successfully",
+    "messageSuccess": "The referred customer has been added to the queue.",
+
+    "benefits": {
+      "discount": {
+        "title": "Special Discounts",
+        "desc": "Enjoy exclusive discounts on your next purchase as a thank you for your referral."
+      },
+      "priority": {
+        "title": "Priority Access",
+        "desc": "Get priority access to new project offers before they're available to the public."
+      },
+      "community": {
+        "title": "Community Recognition",
+        "desc": "Be recognized as a valued community member who helps others discover opportunities."
+      }
+    },
+
+    "formIntro": "It only takes a few seconds to nominate someone — start now and unlock your rewards!",
+    "fullNamePlaceholder": "Enter Full Name",
+    "submit": "Nominate",
+    "cancel": "Cancel"
+  },
+
+  "schedule": {
+    "title": "Meet with a Sales Expert",
+    "description": "Proceed with instant booking. Reserve now to secure your unit immediately.",
+    "selectedDate": "Selected Date",
+    "actions": {
+      "cancel": "Cancel",
+      "schedule": "Schedule a Meeting"
+    }
+  },
+  "unitPlan": {
+    "planTitle": "Unit Plan",
+    "planAlt": "Unit plan image",
+    "basementTitle": "Basement",
+    "basementAlt": "Basement image",
+    "floorTitle": "Floor Details",
+    "floorAlt": "Floor details image",
+
+    "finishingTitle": "Finishing",
+    "finishingAlt": "Finishing details image",
+
+    "gallery360Title": "360 View Gallery",
+    "gallery360Alt": "360 degree unit view"
+  },
+
+  "customerFlow": {
+    "intro": {
+      "title": "Your Journey Starts Here",
+      "description": "Discover the perfect property through our seamless customer experience",
+      "startButton": "Start Your Journey"
+    },
+    "steps": {
+      "title": "How It Works",
+      "subtitle": "Follow these simple steps to find your dream property",
+      "discover": {
+        "title": "Discover",
+        "description": "Browse through our extensive collection of properties"
+      },
+      "explore": {
+        "title": "Explore",
+        "description": "View detailed information and virtual tours"
+      },
+      "reserve": {
+        "title": "Reserve",
+        "description": "Secure your preferred unit with ease"
+      },
+      "complete": {
+        "title": "Complete",
+        "description": "Finalize your purchase and move in"
+      }
+    },
+    "journey": {
+      "title": "Your Customer Journey",
+      "subtitle": "Experience a seamless process from discovery to ownership",
+      "previous": "Previous",
+      "next": "Next",
+      "discover": {
+        "title": "Discover Properties",
+        "description": "Start your journey by exploring our wide range of properties tailored to your needs",
+        "feature1": "Advanced search and filter options",
+        "feature2": "Detailed property information",
+        "feature3": "High-quality images and virtual tours"
+      },
+      "explore": {
+        "title": "Explore Details",
+        "description": "Dive deep into property details, amenities, and neighborhood information",
+        "feature1": "Interactive floor plans",
+        "feature2": "360-degree virtual tours",
+        "feature3": "Comprehensive amenity listings"
+      },
+      "reserve": {
+        "title": "Reserve Your Unit",
+        "description": "Secure your preferred property with our streamlined reservation process",
+        "feature1": "Instant online reservation",
+        "feature2": "Flexible payment options",
+        "feature3": "Expert sales support"
+      }
+    }
+  },
+  "home": {
+    "heroSection": {
+      "title": "Buy & Sell Your Property with Expert Advisors",
+      "subtitle": "Discover a smarter way to buy, sell, and invest in real estate. Whether you're searching for your dream home, looking to sell your property quickly, or exploring profitable investment opportunities.",
+      "search": "Search",
+      "searchPlaceholder": "Search by Location, Compound, Developer",
+      "categories": {
+        "residential": "Residential",
+        "coastal": "Coastal",
+        "commercial": "Commercial"
+      },
+      "type": "Type",
+      "area": "Area",
+      "popularKeywords": "Popular Keywords:",
+      "keywords": {
+        "residential": "Residential",
+        "palmHills": "Palm Hills",
+        "twoBathrooms": "2 Bathrooms",
+        "readyToMove": "Ready to Move",
+        "office": "Office"
+      }
+    },
+    "simpleIntro": {
+      "title": "Buying or Selling, Made Simple",
+      "description": "Whether you're looking to buy your dream home or sell your property for the best price, our expert advisors are here to guide you through every step of the process."
+    },
+    "featuredProperties": {
+      "title": "Our Newest Properties Listed",
+      "viewAll": "Explore More",
+      "seeAllUnits": "See All Units",
+      "favorite": "Add to favorites",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "filters": {
+        "type": "Type",
+        "project": "Project",
+        "bedrooms": "Bedrooms",
+        "baths": "Baths",
+        "bathrooms": "Bathrooms",
+        "price": "Price"
+      }
+    },
+    "processSteps": {
+      "title": "Buying or Selling, Made Simple",
+      "subtitle": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless. Explore verified listings, connect with our sales team, and close deals with confidence—all in one place.",
+      "tabs": {
+        "buying": "Buying",
+        "selling": "Selling",
+        "buyNewUnit": "Buy New Unit",
+        "sellYourUnit": "Sell Your Unit"
+      },
+      "steps": {
+        "browse": {
+          "title": "Browse & Choose Your Unit",
+          "description": "Explore our extensive collection of verified properties in your desired location"
+        },
+        "connect": {
+          "title": "Connect with Our Sales Team",
+          "description": "Get in touch with our professional sales team for personalized guidance"
+        },
+        "schedule": {
+          "title": "Schedule a Visit to your Unit",
+          "description": "Book a visit to see your property in person"
+        },
+        "secure": {
+          "title": "Secure Your Property Today",
+          "description": "Complete the process and secure your dream property"
+        },
+        "reserve": {
+          "title": "Reserve Your Unit",
+          "description": "Secure your dream property with our simple reservation process"
+        },
+        "complete": {
+          "title": "Complete the Deal",
+          "description": "Finalize your purchase with full support and receive your keys"
+        }
+      },
+      "getStarted": "Get Started",
+      "seeAllProjects": "See All Projects"
+    },
+    "promotionalBanner": {
+      "title": "Buy, sell, and fly into your next home effortlessly",
+      "description": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless. Explore verified listings, connect with our sales team, and close deals with confidence—all in one place.",
+      "cta": "Explore Properties",
+      "knowMore": "Know More About us"
+    },
+    "projectsListing": {
+      "title": "Our Newest Projects Listed",
+      "viewAll": "See All Projects",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "sqm": "m²",
+      "readyToMove": "Ready to Move",
+      "underConstruction": "Under Construction",
+      "startingFrom": "Starting from",
+      "currency": "EGP"
+    },
+    "contactForm": {
+      "title": "We're Here to Help You Buy or Sell",
+      "subtitle": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless. Explore verified listings, connect with our sales team, and close deals with confidence—all in one place."
+    }
+  },
+  "allUnits": {
+    "breadcrumb": {
+      "findProperty": "Find Your Property"
+    },
+    "title": "Search for your Property",
+    "searchPlaceholder": "Search by Location, Compound, Developer",
+    "popularKeywords": "Popular Keywords:",
+    "categories": {
+      "residential": "Residential",
+      "coastal": "Coastal",
+      "commercial": "Commercial"
+    },
+    "filters": {
+      "type": "Type: ",
+      "project": "Project: "
+    },
+    "keywords": {
+      "residential": "Residential",
+      "palmHills": "Palm Hills",
+      "twoBathrooms": "2 Bathrooms",
+      "readyToMove": "Ready to Move",
+      "office": "Office"
+    },
+    "sidebar": {
+      "filters": "Filters",
+      "reset": "Reset",
+      "sorting": "Sorting",
+      "sortPlaceholder": "Select sorting",
+      "location": "Location",
+      "locationPlaceholder": "Select location",
+      "project": "Project",
+      "projectPlaceholder": "Select project",
+      "type": "Type",
+      "typePlaceholder": "Select type",
+      "area": "Area",
+      "totalAmount": "Total Amount",
+      "depositAmount": "Deposit Amount",
+      "installmentPeriod": "Installment Period",
+      "installmentPlaceholder": "Select period",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "view": "View",
+      "viewPlaceholder": "Select view",
+      "garden": "Garden",
+      "hasGarden": "Has Garden",
+      "finishingType": "Finishing Type",
+      "finishingPlaceholder": "Select finishing",
+      "deliveryDate": "Delivery Date",
+      "deliveryPlaceholder": "Select delivery year",
+      "model": "Model",
+      "modelPlaceholder": "Select model"
+    },
+    "card": {
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "garage": "Garage",
+      "readyToMove": "Ready to Move",
+      "totalPrice": "Total Price",
+      "paidAmount": "Paid Amount",
+      "offerAmount": "Offer Amount",
+      "toggleFavorite": "Toggle favorite"
+    },
+    "grid": {
+      "unitsFound": "{{count}} Units Found",
+      "loading": "Loading units...",
+      "noResults": "No Properties Found",
+      "noResultsDesc": "Try adjusting your filters to find more properties."
+    }
+  },
+  "modelDetails": {
+    "breadcrumbs": {
+      "newCairo": "New Cairo",
+      "madinaty": "Madinaty",
+      "standalone": "Standalone"
+    },
+    "attributes": {
+      "type": "Type",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "sqft": "sqft",
+      "readyToMove": "Ready to move"
+    },
+    "paymentPlan": {
+      "title": "Payment Plan",
+      "totalPrice": "Total Price",
+      "downPayment": "Down Payment"
+    },
+    "overview": {
+      "title": "Overview",
+      "showMore": "Show More",
+      "showLess": "Show Less"
+    },
+    "unitFeatures": {
+      "title": "Unit Features"
+    },
+    "projectFeatures": {
+      "title": "Project Features"
+    },
+    "features": {
+      "gardenView": "Garden View",
+      "garage": "Garage",
+      "pool": "Pool",
+      "bedrooms": "4 Bedrooms"
+    },
+    "map": {
+      "title": "Map",
+      "video": "Video",
+      "interactiveMap": "Interactive Map"
+    },
+    "contactSalesman": {
+      "customerCount": "Customer Count",
+      "reserve": "Reserve",
+      "payment": "Payment",
+      "finishing": "Finishing",
+      "maintenance": "Maintenance",
+      "roiDiscount": "ROI Discount",
+      "roiDiscountPlaceholder": "Enter ROI Discount",
+      "reservation": "Reservation",
+      "delivery": "Delivery",
+      "totalPrice": "Total Price",
+      "viewInstallmentPlan": "View Installment Plan",
+      "reserveUnit": "Reserve Unit"
+    },
+    "similarUnits": {
+      "title": "Similar Units",
+      "seeAll": "See All Units",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "readyToMove": "Ready to Move",
+      "startingFrom": "Starting From"
+    },
+    "gallery": {
+      "share": "Share",
+      "seeAll": "See All",
+      "photos": "Photos"
+    }
+  },
+  "projectPage": {
+    "overview": {
+      "title": "Overview",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "title": "Project Features",
+      "gardenView": "Garden View",
+      "garage": "Garage",
+      "pool": "Pool",
+      "bedrooms": "4 Bedrooms"
+    },
+    "modelTypes": {
+      "title": "Model Types"
+    },
+    "map": {
+      "title": "Map",
+      "alt": "Project location map"
+    },
+    "gallery": {
+      "title": "Gallery",
+      "imageAlt": "Project gallery image"
+    },
+    "contactForm": {
+      "title": "Get in Touch with our team",
+      "imageAlt": "Project contact image",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Please Enter Your Full Name",
+      "email": "Email Address",
+      "emailPlaceholder": "Please Enter Your Email",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Please Enter Your Phone Number",
+      "subject": "Subject",
+      "subjectPlaceholder": "Enter Subject",
+      "message": "Message",
+      "messagePlaceholder": "Feel Free To Add a Note Here",
+      "submit": "Submit"
+    },
+    "about": {
+      "title": "About Project",
+      "address": "Full Name",
+      "addressValue": "Please Enter Your Full Name",
+      "prices": "Prices",
+      "pricesValue": "Starting from 12M $",
+      "types": "Types",
+      "typesValue": "Please Enter Your Email",
+      "deliveryDate": "Delivery Date",
+      "deliveryDateValue": "September 2025"
+    }
+  },
+  "projectsPage": {
+    "hero": {
+      "title": "Projects",
+      "description": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless. Explore verified listings, connect with our sales team, and close deals with confidence—all in one place.",
+      "imageAlt": "Projects hero image"
+    }
+  },
+  "payment": {
+    "title": "Payment",
+    "breadcrumb": {
+      "profile": "Profile",
+      "reservedUnits": "My Reserved Units"
+    },
+    "summary": {
+      "title": "Payment Summary",
+      "unitPrice": "Unit Price",
+      "amountPaid": "Amount Paid",
+      "time": "Time",
+      "date": "Date",
+      "paymentAmount": "Payment Amount",
+      "paymentHistory": "Payment History"
+    },
+    "methods": {
+      "title": "Payment",
+      "payWithCard": "Pay with Card",
+      "bankTransfer": "Bank Transfer"
+    },
+    "preview": {
+      "title": "Preview",
+      "type": "Type",
+      "floor": "Floor",
+      "bed": "Bed",
+      "bedrooms": "BedRooms",
+      "bathrooms": "Bathrooms",
+      "finishing": "Finishing",
+      "delivery": "Delivery",
+      "area": "Area",
+      "group": "Group",
+      "unitNumber": "Unit Number",
+      "garage": "Garage"
+    }
+  },
+  "contactUs": {
+    "hero": {
+      "title": "Contact us",
+      "description": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless. Explore verified listings, connect with our sales team."
+    },
+    "getInTouch": {
+      "title": "Get in touch with us",
+      "description": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless.",
+      "hotline": {
+        "title": "Hotline",
+        "number": "19691"
+      },
+      "mainSalesCenter": {
+        "title": "Main Sales Center",
+        "address": "Banan project showroom, Fursan Suburb in front of Al Fursan sales center (NHC)- Al Riyadh - Kingdom of Saudi Arabia"
+      },
+      "tmgHeadquarter": {
+        "title": "TMG Saudi Headquarter",
+        "address": "Northern Ring Road - Exit 7 - Al-Taawun District 3285 - Building No. 3281 - Al Riyadh 12478 -8446 - Postal Code 11586 - Kingdom of Saudi Arabia"
+      },
+      "faisaliahCenter": {
+        "title": "Al Faisaliah Sales Center",
+        "address": "King Faisal Charity Institution, King Fahd Road, Al Olaya, North Tower,3rd floor - Riyadh - Kingdom of Saudi Arabia"
+      },
+      "jeddahCenter": {
+        "title": "Jeddah Sales Center",
+        "address": "Palestine street, Jamjom Center, entry 5, third tower- 4th floor - P.O.# 21426, Jeddah - Kingdom of Saudi Arabia"
+      }
+    },
+    "registerInterest": {
+      "title": "Register interest",
+      "description": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless.",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your Full Name",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your Phone Number",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your Email address",
+      "location": "Location",
+      "locationPlaceholder": "Location",
+      "project": "Project",
+      "projectPlaceholder": "Banan City",
+      "branch": "Branch",
+      "branchPlaceholder": "Egypt",
+      "message": "How can we help you ?",
+      "messagePlaceholder": "Enter your message",
+      "submit": "Submit"
+    },
+    "map": {
+      "title": "Find us on map",
+      "description": "Whether you're looking to buy your dream property or sell your unit quickly, our platform makes the process effortless.",
+      "view360": "360°",
+      "video": "Video",
+      "amenities": "Amenities"
+    }
+  },
+  "inventory": {
+    "nav": {
+      "findProperty": "Find Your Property",
+      "inventory": "Inventory",
+      "projects": "Projects",
+      "addLead": "Add Lead"
+    },
+    "breadcrumb": {
+      "inventory": "Inventory"
+    },
+    "title": "Units Inventory",
+    "searchPlaceholder": "Search by Location, Compound, Developer",
+    "popularKeywords": "Popular Keywords:",
+    "filters": {
+      "type": "Type",
+      "project": "Project"
+    },
+    "keywords": {
+      "residential": "Residential",
+      "palmHills": "Palm Hills",
+      "twoBathrooms": "2 Bathrooms",
+      "readyToMove": "Ready to Move",
+      "office": "Office"
+    },
+    "table": {
+      "projectName": "Project Name",
+      "unitNumber": "Unit Number",
+      "groupNumber": "Group Number",
+      "buildingNumber": "Building Number",
+      "status": "Status",
+      "createdDate": "Created Date"
+    }
+  },
+  "addLead": {
+    "title": "Add New Lead",
+    "form": {
+      "customerInformation": "Customer Information",
+      "name": "Name",
+      "namePlaceholder": "Enter name",
+      "mobileNumber": "Mobile Number",
+      "mobileNumberPlaceholder": "Enter mobile number",
+      "gender": "Gender",
+      "genderPlaceholder": "Select gender",
+      "project": "Project",
+      "projectPlaceholder": "Select project",
+      "email": "Email",
+      "emailPlaceholder": "Enter email",
+      "interest": "Interest",
+      "interestPlaceholder": "Select interest",
+      "budget": "Budget",
+      "budgetPlaceholder": "Enter budget",
+      "submit": "Submit"
+    }
+  },
+  "addProperty": {
+    "title": "Add New Property",
+    "breadcrumb": {
+      "sellProperty": "Sell Your Property"
+    },
+    "sections": {
+      "details": "Details",
+      "payment": "Payment",
+      "media": "Media",
+      "contact": "Contact"
+    },
+    "form": {
+      "project": "Project",
+      "projectPlaceholder": "Select Project",
+      "type": "Type",
+      "typePlaceholder": "Select Type",
+      "floor": "Floor",
+      "floorPlaceholder": "Select Floor",
+      "bathrooms": "Bathrooms",
+      "bathroomsPlaceholder": "Select Bathrooms",
+      "finishing": "Finishing",
+      "finishingPlaceholder": "Select Finishing",
+      "delivery": "Delivery",
+      "deliveryPlaceholder": "Select Delivery",
+      "area": "Area",
+      "areaPlaceholder": "Enter Area",
+      "group": "Group",
+      "groupPlaceholder": "Enter Group",
+      "unitNumber": "Unit Number",
+      "unitNumberPlaceholder": "Enter Unit Number",
+      "view": "View",
+      "viewPlaceholder": "Select View",
+      "bedrooms": "Bedrooms",
+      "bedroomsPlaceholder": "Select Bedrooms",
+      "garage": "Garage",
+      "garagePlaceholder": "Select Garage",
+      "unitPrice": "Unit Price",
+      "unitPricePlaceholder": "Enter Unit Price",
+      "paidAmount": "Paid Amount",
+      "paidAmountPlaceholder": "Enter Paid Amount",
+      "overAmount": "Over Amount",
+      "overAmountPlaceholder": "Enter Over Amount",
+      "installmentPlan": "Installment Plan",
+      "installmentPlanPlaceholder": "Select Installment Plan",
+      "uploadImages": "Upload Images",
+      "uploadHint": "PNG, JPG or JPEG (max. 10MB)",
+      "contactName": "Name",
+      "contactNamePlaceholder": "Enter Your Name",
+      "contactEmail": "Email",
+      "contactEmailPlaceholder": "Enter Your Email",
+      "contactPhone": "Phone Number",
+      "contactPhonePlaceholder": "Enter Phone Number",
+      "contactWhatsapp": "Whatsapp",
+      "contactWhatsappPlaceholder": "Enter Whatsapp Number"
+    },
+    "preview": {
+      "title": "Preview",
+      "type": "Type",
+      "floor": "Floor",
+      "bed": "Bed",
+      "bedrooms": "BedRooms",
+      "bathrooms": "Bathrooms",
+      "finishing": "Finishing",
+      "delivery": "Delivery",
+      "area": "Area",
+      "group": "Group",
+      "unitNumber": "Unit Number",
+      "garage": "Garage",
+      "payment": "Payment",
+      "unitPrice": "Unit Price",
+      "paidAmount": "Paid Amount",
+      "overAmount": "Over Amount",
+      "installmentPlan": "Installment Plan",
+      "contact": "Contact",
+      "name": "Name",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "whatsapp": "Whatsapp"
+    }
+  }
+}

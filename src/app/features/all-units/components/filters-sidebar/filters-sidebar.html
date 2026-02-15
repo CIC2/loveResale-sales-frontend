@@ -1,0 +1,295 @@
+<aside class="filters-sidebar" [formGroup]="filtersForm">
+  <!-- Header -->
+  <div class="filters-sidebar__header">
+    <h3 class="filters-sidebar__title">
+      {{ 'allUnits.sidebar.filters' | transloco }}
+    </h3>
+    <button
+      type="button"
+      class="filters-sidebar__reset"
+      (click)="onReset()"
+    >
+      {{ 'allUnits.sidebar.reset' | transloco }}
+    </button>
+  </div>
+
+  <!-- Sorting -->
+  <div class="filters-sidebar__section">
+    <label class="filters-sidebar__label">
+      {{ 'allUnits.sidebar.sorting' | transloco }}
+    </label>
+    <p-select
+      [options]="sortOptions()"
+      formControlName="sortBy"
+      [placeholder]="'allUnits.sidebar.sortPlaceholder' | transloco"
+      optionLabel="label"
+      optionValue="value"
+      styleClass="filters-sidebar__select"
+    />
+  </div>
+
+  <p-accordion [multiple]="true">
+    <!-- Location -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.location' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <p-select
+          [options]="locationOptions()"
+          formControlName="selectedLocation"
+          [placeholder]="'allUnits.sidebar.locationPlaceholder' | transloco"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="filters-sidebar__select"
+        />
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Project -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.project' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <p-select
+          [options]="projectOptions()"
+          formControlName="selectedProject"
+          [placeholder]="'allUnits.sidebar.projectPlaceholder' | transloco"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="filters-sidebar__select"
+        />
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Type -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.type' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <p-select
+          [options]="typeOptions()"
+          formControlName="selectedType"
+          [placeholder]="'allUnits.sidebar.typePlaceholder' | transloco"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="filters-sidebar__select"
+        />
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Area -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.area' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <div class="filters-sidebar__range">
+          <div class="filters-sidebar__range-labels">
+            <span>{{ areaRangeValue[0] }} m²</span>
+            <span>{{ areaRangeValue[1] }} m²</span>
+          </div>
+          <p-slider
+            formControlName="areaRange"
+            [min]="areaMin()"
+            [max]="areaMax()"
+            [range]="true"
+            styleClass="filters-sidebar__slider"
+          />
+        </div>
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Total Amount -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.totalAmount' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <div class="filters-sidebar__range">
+          <div class="filters-sidebar__range-labels">
+            <span>{{ formatPrice(totalAmountRangeValue[0]) }} EGP</span>
+            <span>{{ formatPrice(totalAmountRangeValue[1]) }} EGP</span>
+          </div>
+          <p-slider
+            formControlName="totalAmountRange"
+            [min]="totalAmountMin()"
+            [max]="totalAmountMax()"
+            [range]="true"
+            [step]="100000"
+            styleClass="filters-sidebar__slider"
+          />
+        </div>
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Deposit Amount -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.depositAmount' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <div class="filters-sidebar__range">
+          <div class="filters-sidebar__range-labels">
+            <span>{{ formatPrice(depositAmountRangeValue[0]) }} EGP</span>
+            <span>{{ formatPrice(depositAmountRangeValue[1]) }} EGP</span>
+          </div>
+          <p-slider
+            formControlName="depositAmountRange"
+            [min]="depositMin()"
+            [max]="depositMax()"
+            [range]="true"
+            [step]="50000"
+            styleClass="filters-sidebar__slider"
+          />
+        </div>
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Installment Period -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.installmentPeriod' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <p-select
+          [options]="installmentOptions()"
+          formControlName="selectedInstallment"
+          [placeholder]="'allUnits.sidebar.installmentPlaceholder' | transloco"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="filters-sidebar__select"
+        />
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Bedrooms -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.bedrooms' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <div class="filters-sidebar__chips">
+          @for (option of bedroomOptions(); track option.value) {
+            <button
+              type="button"
+              class="filters-sidebar__chip"
+              [class.filters-sidebar__chip--active]="selectedBedrooms() === option.value"
+              (click)="onBedroomSelect(option.value.toString())"
+            >
+              {{ option.label }}
+            </button>
+          }
+        </div>
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Bathrooms -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.bathrooms' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <div class="filters-sidebar__chips">
+          @for (option of bathroomOptions(); track option.value) {
+            <button
+              type="button"
+              class="filters-sidebar__chip"
+              [class.filters-sidebar__chip--active]="selectedBathrooms() === option.value"
+              (click)="onBathroomSelect(option.value.toString())"
+            >
+              {{ option.label }}
+            </button>
+          }
+        </div>
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- View -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.view' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <p-select
+          [options]="viewOptions()"
+          formControlName="selectedView"
+          [placeholder]="'allUnits.sidebar.viewPlaceholder' | transloco"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="filters-sidebar__select"
+        />
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Garden -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.garden' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <div class="filters-sidebar__checkbox">
+          <p-checkbox
+            formControlName="hasGarden"
+            [binary]="true"
+            inputId="hasGarden"
+          />
+          <label for="hasGarden">{{ 'allUnits.sidebar.hasGarden' | transloco }}</label>
+        </div>
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Finishing Type -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.finishingType' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <p-select
+          [options]="finishingOptions()"
+          formControlName="selectedFinishing"
+          [placeholder]="'allUnits.sidebar.finishingPlaceholder' | transloco"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="filters-sidebar__select"
+        />
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Delivery Date -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.deliveryDate' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <p-select
+          [options]="deliveryOptions()"
+          formControlName="selectedDelivery"
+          [placeholder]="'allUnits.sidebar.deliveryPlaceholder' | transloco"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="filters-sidebar__select"
+        />
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <!-- Model -->
+    <p-accordion-panel>
+      <p-accordion-header>
+        {{ 'allUnits.sidebar.model' | transloco }}
+      </p-accordion-header>
+      <p-accordion-content>
+        <p-select
+          [options]="modelOptions()"
+          formControlName="selectedModel"
+          [placeholder]="'allUnits.sidebar.modelPlaceholder' | transloco"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="filters-sidebar__select"
+        />
+      </p-accordion-content>
+    </p-accordion-panel>
+  </p-accordion>
+</aside>

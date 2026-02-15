@@ -1,0 +1,79 @@
+<section class="inventory-search-header">
+  <!-- Breadcrumb -->
+  <nav class="inventory-search-header__breadcrumb" aria-label="Breadcrumb">
+    <a href="/" class="inventory-search-header__breadcrumb-link">
+      {{ 'common.home' | transloco }}
+    </a>
+    <span class="inventory-search-header__breadcrumb-separator">›</span>
+    <span class="inventory-search-header__breadcrumb-current">
+      {{ 'inventory.breadcrumb.inventory' | transloco }}
+    </span>
+  </nav>
+
+  <!-- Title -->
+  <h1 class="inventory-search-header__title">
+    {{ 'inventory.title' | transloco }}
+  </h1>
+
+  <!-- Search Bar -->
+  <div class="inventory-search-header__search-bar" [formGroup]="searchForm">
+    <div class="inventory-search-header__search-row">
+      <!-- Search Input -->
+      <div class="inventory-search-header__input-wrapper">
+        <svg-icon name="search" class="inventory-search-header__search-icon"></svg-icon>
+        <input
+          pInputText
+          type="text"
+          formControlName="searchQuery"
+          [placeholder]="'inventory.searchPlaceholder' | transloco"
+          class="inventory-search-header__input"
+        />
+      </div>
+
+      <!-- Filters -->
+      <div class="inventory-search-header__filters">
+        <p-select
+          [options]="typeOptions()"
+          formControlName="selectedType"
+          optionLabel="label"
+          optionValue="value"
+          [placeholder]="'inventory.filters.type' | transloco"
+          styleClass="inventory-search-header__dropdown"
+        />
+
+        <p-select
+          [options]="projectOptions()"
+          formControlName="selectedProject"
+          optionLabel="label"
+          optionValue="value"
+          [placeholder]="'inventory.filters.project' | transloco"
+          styleClass="inventory-search-header__dropdown"
+        />
+
+        <!-- Search Button -->
+        <p-button
+          [label]="'common.search' | transloco"
+          icon="pi pi-search"
+          (onClick)="onSearch()"
+          styleClass="inventory-search-header__button"
+        />
+      </div>
+    </div>
+
+    <!-- Popular Keywords -->
+    <div class="inventory-search-header__keywords">
+      <span class="inventory-search-header__keywords-label">
+        {{ 'inventory.popularKeywords' | transloco }}
+      </span>
+      @for (keyword of popularKeywords(); track keyword) {
+        <button
+          type="button"
+          class="inventory-search-header__keyword"
+          (click)="onKeywordClick(keyword)"
+        >
+          {{ 'inventory.keywords.' + keyword | transloco }}
+        </button>
+      }
+    </div>
+  </div>
+</section>

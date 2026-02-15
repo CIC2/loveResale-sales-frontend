@@ -1,0 +1,27 @@
+<div class="dialog-container">
+  <div class="custom-header">
+    <span class="title">
+      {{ "terms.title" | transloco }}
+    </span>
+  </div>
+
+  <div class="scrollable-content">
+    <div class="terms-wrapper" [class.ar-first]="lang === 'ar'">
+      <div class="section" dir="ltr">
+        <div [innerHTML]="termsEN"></div>
+      </div>
+
+      <div class="section" dir="rtl">
+        <div [innerHTML]="termsAR"></div>
+      </div>
+    </div>
+  </div>
+
+  <div terms-close-btn class="footer">
+    <p-button
+      [label]="'close' | transloco"
+      styleClass="p-button"
+      (onClick)="close()"
+    ></p-button>
+  </div>
+</div>

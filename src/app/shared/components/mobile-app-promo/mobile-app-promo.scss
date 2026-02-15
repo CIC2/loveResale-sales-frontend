@@ -1,0 +1,86 @@
+.mobile-app-promo {
+  background-color: var(--primary-10);
+  display: flex;
+  flex-direction: column; // stack on mobile
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.75rem;
+  width: 100%;
+  overflow-x: hidden; // prevent horizontal overflow
+
+  @media (min-width: 768px) {
+    flex-direction: row; // side-by-side on desktop
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+
+  .promo-text {
+    width: 100%;
+    max-width: 600px; // prevent text from overflowing hero
+    text-align: left;
+
+    p {
+      margin: 0; // remove default margin
+
+      &:nth-child(1) {
+        font-size: var(--font-size-2);
+        color: var(--secondary);
+        font-weight: 600;
+      }
+
+      &:nth-child(2) {
+        font-size: var(--font-size-7);
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      &:nth-child(3) {
+        font-size: var(--font-size-3);
+        color: #313131;
+        font-weight: 500;
+        line-height: 1.5rem;
+        word-wrap: break-word; // prevent overflow
+      }
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap; // allow icons to wrap on small screens
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+
+      img {
+        cursor: pointer;
+        max-width: 120px; // scale images to fit
+        height: auto;
+      }
+    }
+  }
+
+  .promo-image {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/* Optional: fine-tune mobile text */
+@media (max-width: 768px) {
+  .mobile-app-promo {
+    .promo-text {
+      p:nth-child(2) {
+        font-size: var(--font-size-5); // smaller heading on mobile
+      }
+
+      p:nth-child(3) {
+        font-size: var(--font-size-2);
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<div class="inventory-table">
+  <p-table
+    [value]="units()"
+    styleClass="inventory-table__table"
+    [paginator]="false"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="inventory-table__header-cell">
+          {{ 'inventory.table.projectName' | transloco }}
+        </th>
+        <th class="inventory-table__header-cell">
+          {{ 'inventory.table.unitNumber' | transloco }}
+        </th>
+        <th class="inventory-table__header-cell">
+          {{ 'inventory.table.groupNumber' | transloco }}
+        </th>
+        <th class="inventory-table__header-cell">
+          {{ 'inventory.table.buildingNumber' | transloco }}
+        </th>
+        <th class="inventory-table__header-cell">
+          {{ 'inventory.table.status' | transloco }}
+        </th>
+        <th class="inventory-table__header-cell">
+          {{ 'inventory.table.createdDate' | transloco }}
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-unit>
+      <tr class="inventory-table__row">
+        <td class="inventory-table__cell">
+          {{ unit.projectName }}
+        </td>
+        <td class="inventory-table__cell">
+          {{ unit.unitNumber }}
+        </td>
+        <td class="inventory-table__cell">
+          {{ unit.groupNumber }}
+        </td>
+        <td class="inventory-table__cell">
+          {{ unit.buildingNumber }}
+        </td>
+        <td class="inventory-table__cell">
+          <button
+            type="button"
+            class="inventory-table__status-btn"
+            (click)="onStatusClick(unit)"
+          >
+            {{ unit.status }}
+          </button>
+        </td>
+        <td class="inventory-table__cell">
+          {{ unit.createdDate }}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

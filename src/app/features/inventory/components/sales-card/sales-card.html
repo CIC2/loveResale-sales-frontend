@@ -1,0 +1,38 @@
+<div class="sales-card">
+  <div class="sales-card__overlay" (click)="onClose()"></div>
+  <div class="sales-card__content">
+    <button
+      type="button"
+      class="sales-card__close"
+      (click)="onClose()"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    @if (unit().salesPerson) {
+      <div class="sales-card__person">
+        <img
+          [src]="unit().salesPerson!.avatar"
+          [alt]="unit().salesPerson!.name"
+          class="sales-card__avatar"
+        />
+        <div class="sales-card__person-info">
+          <h3 class="sales-card__name">
+            {{ unit().salesPerson!.name }}
+          </h3>
+          <div class="sales-card__status-wrapper" [formGroup]="statusForm">
+            <span class="sales-card__status-indicator"></span>
+            <p-select
+              formControlName="status"
+              [options]="statusOptions"
+              optionLabel="label"
+              optionValue="value"
+              styleClass="sales-card__status-select"
+            />
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

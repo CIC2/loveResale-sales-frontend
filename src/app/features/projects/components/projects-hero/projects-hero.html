@@ -1,0 +1,24 @@
+<div class="projects-hero">
+  <div class="projects-hero__image-wrapper">
+    <img
+      [src]="heroImageUrl()"
+      [alt]="'projectsPage.hero.imageAlt' | transloco"
+      class="projects-hero__image"
+    />
+    <div class="projects-hero__overlay"></div>
+  </div>
+  
+  <div class="projects-hero__content">
+    <p-breadcrumb
+      [model]="breadcrumbItems"
+      [home]="breadcrumbHome"
+      class="projects-hero__breadcrumb"
+    />
+    
+    <h1 class="projects-hero__title">{{ 'projectsPage.hero.title' | transloco }}</h1>
+    
+    <p class="projects-hero__description">
+      {{ 'projectsPage.hero.description' | transloco }}
+    </p>
+  </div>
+</div>

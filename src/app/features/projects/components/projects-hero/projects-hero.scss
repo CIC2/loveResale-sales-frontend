@@ -1,0 +1,107 @@
+.projects-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 23.875rem;
+  width: 100%;
+  padding: 0rem 2.75rem;
+
+
+  @media (max-width: 768px) {
+    height: 20rem;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+
+  }
+
+  &__overlay {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.7) 100%);
+    margin-inline-start: -100%;
+    border-radius: 1rem;
+
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2.75rem;
+    z-index: 1;
+    margin-inline-start: -100%;
+    width: 100%;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+    }
+  }
+
+  &__breadcrumb {
+    ::ng-deep {
+      .p-breadcrumb {
+        background: transparent;
+        border: none;
+        padding: 0;
+
+        .p-breadcrumb-list {
+          gap: 0.5rem;
+        }
+
+        .p-breadcrumb-item-link {
+          color: var(--white);
+          font-size: var(--font-size-1);
+
+          &:hover {
+            color: var(--primary-400);
+          }
+        }
+
+        .p-breadcrumb-separator {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: var(--font-size-8);
+    font-weight: 600;
+    color: var(--white);
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size-6);
+    }
+  }
+
+  &__description {
+    font-size: var(--font-size-2);
+    color: var(--white);
+    max-width: 40rem;
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.9;
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size-1);
+    }
+  }
+}

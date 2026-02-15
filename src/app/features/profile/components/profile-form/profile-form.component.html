@@ -1,0 +1,140 @@
+<section class="profile-form">
+  <div class="profile-form__header">
+    <p-breadcrumb
+      [model]="breadcrumbItems"
+      styleClass="profile-form__breadcrumb"
+    />
+    <h2 class="profile-form__title">
+      {{ 'profile.form.title' | transloco }}
+    </h2>
+  </div>
+
+  <form class="profile-form__body" [formGroup]="formGroup">
+    <div class="profile-form__grid">
+      <div class="profile-form__field">
+        <label class="profile-form__label" for="firstName">
+          {{ 'profile.form.firstName' | transloco }}
+        </label>
+        <input
+          pInputText
+          id="firstName"
+          class="profile-form__input"
+          formControlName="firstName"
+          [placeholder]="'profile.form.placeholders.firstName' | transloco"
+        />
+      </div>
+
+      <div class="profile-form__field">
+        <label class="profile-form__label" for="lastName">
+          {{ 'profile.form.lastName' | transloco }}
+        </label>
+        <input
+          pInputText
+          id="lastName"
+          class="profile-form__input"
+          formControlName="lastName"
+          [placeholder]="'profile.form.placeholders.lastName' | transloco"
+        />
+      </div>
+
+      <div class="profile-form__field">
+        <label class="profile-form__label" for="phoneNumber">
+          {{ 'profile.form.phoneNumber' | transloco }}
+        </label>
+        <input
+          pInputText
+          id="phoneNumber"
+          class="profile-form__input"
+          formControlName="phoneNumber"
+          [placeholder]="'profile.form.placeholders.phoneNumber' | transloco"
+        />
+      </div>
+
+      <div class="profile-form__field">
+        <label class="profile-form__label" for="phoneNumberOptional">
+          {{ 'profile.form.phoneNumberOptional' | transloco }}
+          <span class="profile-form__optional">
+            ({{ 'profile.form.optional' | transloco }})
+          </span>
+        </label>
+        <input
+          pInputText
+          id="phoneNumberOptional"
+          class="profile-form__input"
+          formControlName="phoneNumberOptional"
+          [placeholder]="'profile.form.placeholders.phoneNumber' | transloco"
+        />
+      </div>
+
+      <div class="profile-form__field">
+        <label class="profile-form__label" for="email">
+          {{ 'profile.form.emailAddress' | transloco }}
+        </label>
+        <input
+          pInputText
+          id="email"
+          class="profile-form__input"
+          formControlName="email"
+          [placeholder]="'profile.form.placeholders.emailAddress' | transloco"
+        />
+      </div>
+
+      <div class="profile-form__field">
+        <label class="profile-form__label" for="birthDate">
+          {{ 'profile.form.birthDate' | transloco }}
+        </label>
+        <!-- <p-calendar
+          inputId="birthDate"
+          styleClass="profile-form__calendar"
+          formControlName="birthDate"
+          [placeholder]="'profile.form.placeholders.birthDate' | transloco"
+          [showIcon]="false"
+        /> -->
+      </div>
+
+      <div class="profile-form__field">
+        <label class="profile-form__label" for="nationality">
+          {{ 'profile.form.nationality' | transloco }}
+        </label>
+        <p-select
+          inputId="nationality"
+          styleClass="profile-form__dropdown"
+          formControlName="nationality"
+          [options]="nationalityOptions"
+          optionLabel="label"
+          optionValue="value"
+          [placeholder]="'profile.form.placeholders.nationality' | transloco"
+        />
+      </div>
+
+      <div class="profile-form__field">
+        <label class="profile-form__label" for="gender">
+          {{ 'profile.form.gender.label' | transloco }}
+        </label>
+        <p-select
+          inputId="gender"
+          styleClass="profile-form__dropdown"
+          formControlName="gender"
+          [options]="genderOptions"
+          optionLabel="label"
+          optionValue="value"
+          [placeholder]="'profile.form.placeholders.gender' | transloco"
+        />
+      </div>
+    </div>
+
+    <div class="profile-form__actions">
+      <p-button
+        type="button"
+        [label]="'profile.actions.cancel' | transloco"
+        styleClass="profile-form__cancel"
+        [outlined]="true"
+      />
+      <p-button
+        type="submit"
+        [label]="'profile.actions.save' | transloco"
+        styleClass="profile-form__save"
+      />
+    </div>
+  </form>
+</section>

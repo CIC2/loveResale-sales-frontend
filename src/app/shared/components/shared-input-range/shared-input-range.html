@@ -1,0 +1,75 @@
+<div class="card shared-input-range-wrapper" [formGroup]="rangeForm">
+  <p-select
+    #select
+    [options]="[{ name: '' }]"
+    formControlName="selectedValue"
+    optionLabel="name"
+    [loading]="isLoading()"
+    [disabled]="isDisable()"
+    appendTo="body"
+    placeholder="Area Range"
+    class="card"
+    panelStyleClass="range-select-panel"
+  >
+    <ng-template #selectedItem let-selectedOption>
+      <div>
+        @if (!isDisable()) {
+        <span>
+          {{ minValue() | number }} M² - {{ maxValue() | number }} M²
+        </span>
+        } @else {
+        <span>Select Area</span>
+        }
+      </div>
+    </ng-template>
+    <ng-template let-country #item></ng-template>
+    <ng-template #header>
+      <div class="header">Area Range</div>
+
+      <div class="item" (click)="$event.stopPropagation()">
+        <div class="inputs">
+          <p-inputnumber
+            formControlName="minInput"
+            [min]="ranges().min"
+            [max]="sliderValues()[1]"
+            (onInput)="onMinInputChange($event.value)"
+            placeholder="Min"
+          />
+
+          <p-inputnumber
+            formControlName="maxInput"
+            [min]="sliderValues()[0]"
+            [max]="ranges().max"
+            (onInput)="onMaxInputChange($event.value)"
+            placeholder="Max"
+          />
+        </div>
+
+        <p-slider
+          formControlName="sliderRange"
+          [range]="true"
+          [min]="ranges().min"
+          [max]="ranges().max"
+          (onSlideEnd)="onSliderChange($event)"
+        />
+
+        <div class="areaRange-desc">
+          <span>{{ ranges().min | number }} M²</span>
+          <span>{{ ranges().max | number }} M²</span>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #footer>
+      <div class="footer">
+        <p-button type="button" (click)="submit()" fluid>
+          @if (isLoading()) {
+          <i class="pi pi-spin pi-spinner"></i>
+          } Apply
+        </p-button>
+      </div>
+    </ng-template>
+
+    <ng-template #empty></ng-template>
+  </p-select>
+</div>

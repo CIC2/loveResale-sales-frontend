@@ -1,0 +1,64 @@
+<div class="payment-summary">
+  <div class="payment-summary__header">
+    <h2 class="payment-summary__title">
+      {{ 'payment.summary.title' | transloco }}
+    </h2>
+    <button class="payment-summary__icon-btn">
+      <svg-icon name="arrow" [svgClass]="'payment-summary__icon'"></svg-icon>
+    </button>
+  </div>
+
+  <div class="payment-summary__grid">
+    <div class="payment-summary__item">
+      <span class="payment-summary__label">
+        {{ 'payment.summary.unitPrice' | transloco }}
+      </span>
+      <span class="payment-summary__value">
+        {{ formatCurrency(data().unitPrice) }} {{ data().currency }}
+      </span>
+    </div>
+
+    <div class="payment-summary__item">
+      <span class="payment-summary__label">
+        {{ 'payment.summary.amountPaid' | transloco }}
+      </span>
+      <span class="payment-summary__value">
+        {{ formatCurrency(data().amountPaid) }} {{ data().currency }}
+      </span>
+    </div>
+
+    <div class="payment-summary__item">
+      <span class="payment-summary__label">
+        {{ 'payment.summary.time' | transloco }}
+      </span>
+      <span class="payment-summary__value">
+        {{ formatCurrency(data().remainingTime) }} {{ data().currency }}
+      </span>
+    </div>
+
+    <div class="payment-summary__item">
+      <span class="payment-summary__label">
+        {{ 'payment.summary.date' | transloco }}
+      </span>
+      <span class="payment-summary__value">
+        {{ data().paymentDate }}
+      </span>
+    </div>
+  </div>
+
+  <div class="payment-summary__footer">
+    <div class="payment-summary__amount">
+      <span class="payment-summary__amount-label">
+        {{ 'payment.summary.paymentAmount' | transloco }}
+      </span>
+      <span class="payment-summary__amount-value">
+        {{ formatCurrency(data().paymentAmount) }} {{ data().currency }}
+      </span>
+    </div>
+
+    <p-button
+      [label]="'payment.summary.paymentHistory' | transloco"
+      styleClass="payment-summary__history-btn"
+    />
+  </div>
+</div>

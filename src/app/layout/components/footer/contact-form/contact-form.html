@@ -1,0 +1,108 @@
+<section class="contact-form">
+  <div class="contact-form__container">
+    <!-- Header -->
+    <div class="contact-form__header">
+      <h2 class="contact-form__title">
+        {{ 'home.contactForm.title' | transloco }}
+      </h2>
+      <p class="contact-form__subtitle">
+        {{ 'home.contactForm.subtitle' | transloco }}
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form__form">
+      <div class="contact-form__grid">
+        <!-- Name Field -->
+        <div class="contact-form__field">
+          <label for="name" class="contact-form__label">
+            {{ 'contact.name' | transloco }}
+          </label>
+          <input
+            pInputText
+            id="name"
+            formControlName="name"
+            [class.ng-invalid]="isFieldInvalid('name')"
+            class="contact-form__input"
+          />
+          @if (isFieldInvalid('name')) {
+            <small class="contact-form__error">
+              {{ 'validation.fullName.required' | transloco }}
+            </small>
+          }
+        </div>
+
+        <!-- Phone Field -->
+        <div class="contact-form__field">
+          <label for="phone" class="contact-form__label">
+            {{ 'contact.phoneNumber' | transloco }}
+          </label>
+          <input
+            pInputText
+            id="phone"
+            type="tel"
+            formControlName="phone"
+            [class.ng-invalid]="isFieldInvalid('phone')"
+            class="contact-form__input"
+          />
+          @if (isFieldInvalid('phone')) {
+            <small class="contact-form__error">
+              {{ 'validation.phoneNumber.required' | transloco }}
+            </small>
+          }
+        </div>
+
+        <!-- Email Field -->
+        <div class="contact-form__field">
+          <label for="email" class="contact-form__label">
+            {{ 'contact.emailAddress' | transloco }}
+          </label>
+          <input
+            pInputText
+            id="email"
+            type="email"
+            formControlName="email"
+            [class.ng-invalid]="isFieldInvalid('email')"
+            class="contact-form__input"
+          />
+          @if (isFieldInvalid('email')) {
+            <small class="contact-form__error">
+              {{ 'validation.email.required' | transloco }}
+            </small>
+          }
+        </div>
+      </div>
+
+      <!-- Message Field -->
+      <div class="contact-form__field contact-form__field--full">
+        <label for="message" class="contact-form__label">
+          {{ 'contact.message' | transloco }}
+        </label>
+        <textarea
+          pInputTextarea
+          id="message"
+          formControlName="message"
+          [rows]="4"
+          [placeholder]="'contact.messagePlaceholder' | transloco"
+          [class.ng-invalid]="isFieldInvalid('message')"
+          class="contact-form__textarea"
+        ></textarea>
+        @if (isFieldInvalid('message')) {
+          <small class="contact-form__error">
+            {{ 'validation.address.minlength' | transloco }}
+          </small>
+        }
+      </div>
+
+      <!-- Submit Button -->
+      <div class="contact-form__actions">
+        <p-button
+          type="submit"
+          [label]="'contact.submit' | transloco"
+          [loading]="isSubmitting"
+          class="contact-form__submit"
+        />
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+<section class="auth">
+  <div class="auth__left">
+    <div class="auth__slider">
+      <swiper-container #swiper init="false" lazy="true">
+        @for (item of signUpList; track $index) {
+        <swiper-slide class="auth__slide">
+          <img src="{{ item.img }}" alt="sign-in image" loading="lazy" />
+          <div class="auth__overlay"></div>
+        </swiper-slide>
+        }
+      </swiper-container>
+
+      <figure class="auth__logo">
+        <img src="images/auth/login.png" alt="icon-TMG" />
+      </figure>
+    </div>
+
+    <div class="auth__text">
+      <h2 class="auth__title">Luxury Meets Convenience</h2>
+      <p class="auth__subtitle">
+        Experience beautifully designed compounds with all amenities you need,
+        from leisure to green spaces.
+      </p>
+    </div>
+
+    <div class="auth__pagination">
+      @for (dot of signUpList; track $index) {
+      <span
+        class="auth__dot"
+        [class.auth__dot--active]="currentIndex() === $index"
+      ></span>
+      }
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="auth__right">
+    <header class="auth__right-header">
+      <h1 class="auth__right-title">Welcome to TMG!</h1>
+      <p class="auth__right-subtitle">Sign up new account</p>
+    </header>
+    <div class="auth__right__staps">
+      <div class="auth__steps">
+        <div
+          class="auth__steps--step"
+          [class.auth__steps--step--active]="
+            activeFormIndex() == ActiveForm.PERSONAL_FORM
+          "
+          (click)="activeFormIndex.set(ActiveForm.PERSONAL_FORM)"
+        ></div>
+        <div
+          class="auth__steps--step"
+          [class.auth__steps--step--active]="
+            activeFormIndex() == ActiveForm.ACCOUNT_CREDENTIALS
+          "
+        ></div>
+      </div>
+    </div>
+
+    <form [formGroup]="signUpForm">
+      @switch (activeFormIndex()) { @case (ActiveForm.PERSONAL_FORM) {
+      <app-personal-info-form
+        (onNextStep)="goToSecundForm()"
+      ></app-personal-info-form>
+      } @case (ActiveForm.ACCOUNT_CREDENTIALS) {
+      <app-account-credentials-form />
+      } }
+    </form>
+    <footer class="auth__footer">
+      Already have Account?
+      <p-button label="Sign In" link (click)="openSignIn()"></p-button>
+    </footer>
+  </div>
+</section>

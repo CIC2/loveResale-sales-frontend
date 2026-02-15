@@ -1,0 +1,135 @@
+<form [formGroup]="form" class="add-lead-form">
+  <div class="add-lead-form__container">
+    <!-- Section Title -->
+    <h2 class="add-lead-form__section-title">
+      {{ 'addLead.form.customerInformation' | transloco }}
+    </h2>
+
+    <!-- Form Fields Grid -->
+    <div class="add-lead-form__fields">
+      <!-- Name - Full Width -->
+      <div class="add-lead-form__field add-lead-form__field--full">
+        <label class="add-lead-form__label" for="name">
+          {{ 'addLead.form.name' | transloco }}
+        </label>
+        <input
+          pInputText
+          id="name"
+          formControlName="name"
+          class="add-lead-form__input"
+          [placeholder]="'addLead.form.namePlaceholder' | transloco"
+        />
+      </div>
+
+      <!-- Grid for remaining fields -->
+      <div class="add-lead-form__grid">
+        <!-- Mobile Number -->
+        <div class="add-lead-form__field">
+          <label class="add-lead-form__label" for="mobileNumber">
+            {{ 'addLead.form.mobileNumber' | transloco }}
+          </label>
+          <input
+            pInputText
+            id="mobileNumber"
+            formControlName="mobileNumber"
+            class="add-lead-form__input"
+            [placeholder]="'addLead.form.mobileNumberPlaceholder' | transloco"
+          />
+        </div>
+
+        <!-- Gender -->
+        <div class="add-lead-form__field">
+          <label class="add-lead-form__label" for="gender">
+            {{ 'addLead.form.gender' | transloco }}
+          </label>
+          <p-select
+            id="gender"
+            formControlName="gender"
+            [options]="genderOptions()"
+            optionLabel="label"
+            optionValue="value"
+            [placeholder]="'addLead.form.genderPlaceholder' | transloco"
+            styleClass="add-lead-form__select"
+          />
+        </div>
+
+        <!-- Project -->
+        <div class="add-lead-form__field">
+          <label class="add-lead-form__label" for="project">
+            {{ 'addLead.form.project' | transloco }}
+          </label>
+          <p-select
+            id="project"
+            formControlName="project"
+            [options]="projectOptions()"
+            optionLabel="label"
+            optionValue="value"
+            [placeholder]="'addLead.form.projectPlaceholder' | transloco"
+            styleClass="add-lead-form__select"
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="add-lead-form__field">
+          <label class="add-lead-form__label" for="email">
+            {{ 'addLead.form.email' | transloco }}
+          </label>
+          <input
+            pInputText
+            id="email"
+            type="email"
+            formControlName="email"
+            class="add-lead-form__input"
+            [placeholder]="'addLead.form.emailPlaceholder' | transloco"
+          />
+        </div>
+
+        <!-- Interest -->
+        <div class="add-lead-form__field">
+          <label class="add-lead-form__label" for="interest">
+            {{ 'addLead.form.interest' | transloco }}
+          </label>
+          <p-select
+            id="interest"
+            formControlName="interest"
+            [options]="interestOptions()"
+            optionLabel="label"
+            optionValue="value"
+            [placeholder]="'addLead.form.interestPlaceholder' | transloco"
+            styleClass="add-lead-form__select"
+          />
+        </div>
+
+        <!-- Budget -->
+        <div class="add-lead-form__field">
+          <label class="add-lead-form__label" for="budget">
+            {{ 'addLead.form.budget' | transloco }}
+          </label>
+          <input
+            pInputText
+            id="budget"
+            formControlName="budget"
+            class="add-lead-form__input"
+            [placeholder]="'addLead.form.budgetPlaceholder' | transloco"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="add-lead-form__actions">
+      <p-button
+        [label]="'common.cancel' | transloco"
+        (onClick)="onCancel()"
+        styleClass="add-lead-form__cancel-btn"
+        [outlined]="true"
+      />
+      <p-button
+        [label]="'addLead.form.submit' | transloco"
+        icon="pi pi-arrow-right"
+        (onClick)="onSubmit()"
+        styleClass="add-lead-form__submit-btn"
+      />
+    </div>
+  </div>
+</form>

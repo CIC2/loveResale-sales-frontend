@@ -1,0 +1,98 @@
+<div class="project-contact-form">
+  <div class="project-contact-form__image-section">
+    <img
+      [src]="contactImage()"
+      [alt]="'projectPage.contactForm.imageAlt' | transloco"
+      class="project-contact-form__image"
+    />
+  </div>
+  
+  <div class="project-contact-form__form-section">
+    <h2 class="project-contact-form__title">
+      {{ 'projectPage.contactForm.title' | transloco }}
+    </h2>
+    
+    <form 
+      [formGroup]="contactForm" 
+      (ngSubmit)="onSubmit()"
+      class="project-contact-form__form"
+    >
+      <div class="project-contact-form__field">
+        <label for="fullName" class="project-contact-form__label">
+          {{ 'projectPage.contactForm.fullName' | transloco }}
+        </label>
+        <input
+          pInputText
+          id="fullName"
+          formControlName="fullName"
+          [placeholder]="'projectPage.contactForm.fullNamePlaceholder' | transloco"
+          class="project-contact-form__input"
+        />
+      </div>
+      
+      <div class="project-contact-form__field">
+        <label for="email" class="project-contact-form__label">
+          {{ 'projectPage.contactForm.email' | transloco }}
+        </label>
+        <input
+          pInputText
+          id="email"
+          formControlName="email"
+          type="email"
+          [placeholder]="'projectPage.contactForm.emailPlaceholder' | transloco"
+          class="project-contact-form__input"
+        />
+      </div>
+      
+      <div class="project-contact-form__field">
+        <label for="phone" class="project-contact-form__label">
+          {{ 'projectPage.contactForm.phone' | transloco }}
+        </label>
+        <input
+          pInputText
+          id="phone"
+          formControlName="phone"
+          type="tel"
+          [placeholder]="'projectPage.contactForm.phonePlaceholder' | transloco"
+          class="project-contact-form__input"
+        />
+      </div>
+      
+      <div class="project-contact-form__field">
+        <label for="subject" class="project-contact-form__label">
+          {{ 'projectPage.contactForm.subject' | transloco }}
+        </label>
+        <input
+          pInputText
+          id="subject"
+          formControlName="subject"
+          [placeholder]="'projectPage.contactForm.subjectPlaceholder' | transloco"
+          class="project-contact-form__input"
+        />
+      </div>
+      
+      <div class="project-contact-form__field">
+        <label for="message" class="project-contact-form__label">
+          {{ 'projectPage.contactForm.message' | transloco }}
+        </label>
+        <textarea
+          pTextarea
+          id="message"
+          formControlName="message"
+          [rows]="4"
+          [placeholder]="'projectPage.contactForm.messagePlaceholder' | transloco"
+          class="project-contact-form__textarea"
+        ></textarea>
+      </div>
+      
+      <div class="project-contact-form__actions">
+        <p-button
+          type="submit"
+          [label]="'projectPage.contactForm.submit' | transloco"
+          severity="primary"
+          [style]="{ width: '100%' }"
+        />
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+<article class="unit-card" (click)="onCardClick()">
+  <!-- Image Section -->
+  <figure class="unit-card__image-wrapper">
+    <img
+      [src]="unit().imageUrl"
+      [alt]="unit().title"
+      appImageFallback
+      class="unit-card__image"
+    />
+    <button
+      type="button"
+      class="unit-card__favorite"
+      [class.unit-card__favorite--active]="unit().isFavorite"
+      (click)="onFavoriteClick($event)"
+      [attr.aria-label]="'allUnits.card.toggleFavorite' | transloco"
+    >
+      <svg-icon [name]="unit().isFavorite ? 'heart-filled' : 'heart'"></svg-icon>
+    </button>
+  </figure>
+
+  <!-- Content Section -->
+  <div class="unit-card__content">
+    <!-- Location -->
+    <span class="unit-card__location">
+      <svg-icon name="location" class="unit-card__location-icon"></svg-icon>
+      {{ unit().location }}
+    </span>
+
+    <!-- Title -->
+    <h3 class="unit-card__title">{{ unit().title }}</h3>
+
+    <!-- Specs Row 1 -->
+    <div class="unit-card__specs">
+      <div class="unit-card__spec">
+        <svg-icon name="bed" class="unit-card__spec-icon"></svg-icon>
+        <span class="unit-card__spec-value">{{ unit().bedrooms }}</span>
+        <span class="unit-card__spec-label">{{ 'allUnits.card.bedrooms' | transloco }}</span>
+      </div>
+
+      <div class="unit-card__spec">
+        <svg-icon name="bath" class="unit-card__spec-icon"></svg-icon>
+        <span class="unit-card__spec-value">{{ unit().bathrooms }}</span>
+        <span class="unit-card__spec-label">{{ 'allUnits.card.bathrooms' | transloco }}</span>
+      </div>
+
+      <div class="unit-card__spec">
+        <svg-icon name="eye" class="unit-card__spec-icon"></svg-icon>
+        <span class="unit-card__spec-label">{{ unit().view }}</span>
+      </div>
+    </div>
+
+    <!-- Specs Row 2 -->
+    <div class="unit-card__specs">
+      <div class="unit-card__spec">
+        <svg-icon name="size" class="unit-card__spec-icon"></svg-icon>
+        <span class="unit-card__spec-value">{{ unit().area }}</span>
+        <span class="unit-card__spec-label">m²</span>
+      </div>
+
+      @if (unit().garage) {
+        <div class="unit-card__spec">
+          <svg-icon name="car" class="unit-card__spec-icon"></svg-icon>
+          <span class="unit-card__spec-label">{{ 'allUnits.card.garage' | transloco }}</span>
+        </div>
+      }
+
+      @if (unit().readyToMove) {
+        <div class="unit-card__spec unit-card__spec--highlight">
+          <svg-icon name="check-circle" class="unit-card__spec-icon"></svg-icon>
+          <span class="unit-card__spec-label">{{ 'allUnits.card.readyToMove' | transloco }}</span>
+        </div>
+      }
+    </div>
+
+    <!-- Prices -->
+    <div class="unit-card__prices">
+      <div class="unit-card__price">
+        <span class="unit-card__price-label">{{ 'allUnits.card.totalPrice' | transloco }}</span>
+        <span class="unit-card__price-value">{{ formatPrice(unit().totalPrice) }} <small>EGP</small></span>
+      </div>
+
+      <div class="unit-card__price">
+        <span class="unit-card__price-label">{{ 'allUnits.card.paidAmount' | transloco }}</span>
+        <span class="unit-card__price-value">{{ formatPrice(unit().paidAmount) }} <small>EGP</small></span>
+      </div>
+
+      <div class="unit-card__price unit-card__price--offer">
+        <span class="unit-card__price-label">{{ 'allUnits.card.offerAmount' | transloco }}</span>
+        <span class="unit-card__price-value unit-card__price-value--offer">{{ formatPrice(unit().offerAmount) }} <small>EGP</small></span>
+      </div>
+    </div>
+  </div>
+</article>

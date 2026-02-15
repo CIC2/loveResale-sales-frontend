@@ -1,0 +1,77 @@
+<article class="card-container" (click)="goToUnit(model().id)">
+  <!-- Image / Media -->
+  <figure>
+    <img [src]="model().modelImageUrl" appImageFallback alt="Unit image" />
+    <div class="img-overlay">
+      <a
+        aria-label="Comparison"
+        (click)="onViewDetails($event)"
+        [class.disabled]="this.comparison.isInComparison(model().id)"
+      >
+        <svg-icon class="icon" name="compare"></svg-icon>
+        <span class="compare-label">Compare</span>
+      </a>
+    </div>
+  </figure>
+
+  <!-- Card Body -->
+  <div class="card-content">
+    <div>
+      <!-- Title & Developer -->
+      <header class="card-content-header">
+        <h2 class="left">
+          {{ model().usageTypeName }} - {{ model().modelCode }}
+        </h2>
+        <p class="right">
+          <svg-icon name="location"></svg-icon>
+          <span>{{ model().projectName }}</span>
+        </p>
+      </header>
+    </div>
+
+    <!-- Building Type -->
+    <p class="building-type">
+      <svg-icon name="building-type"></svg-icon>
+      <span>Floor {{ model().floor }}</span>
+    </p>
+    <section class="card-details" aria-label="Property details">
+      <p class="details-item">
+        <svg-icon name="bed"></svg-icon>
+        <span class="icon-caption">
+          {{ model().numberOfBedrooms }}
+          <span>{{
+            model().numberOfBedrooms == "1"
+              ? ("unitCard.bedroom" | transloco)
+              : ("unitCard.beds" | transloco)
+          }}</span>
+        </span>
+      </p>
+
+      <p class="details-item">
+        <svg-icon name="bath"></svg-icon>
+        <span class="icon-caption">
+          {{ model().numberOfBathrooms }}
+          <span>{{
+            model().numberOfBathrooms == "1"
+              ? ("unitCard.bathroom" | transloco)
+              : ("unitCard.baths" | transloco)
+          }}</span>
+        </span>
+      </p>
+
+      <p class="details-item">
+        <svg-icon name="size"></svg-icon>
+        <span class="icon-caption">
+          {{ model().area }} {{ "unitCard.squareMeter" | transloco }}
+        </span>
+      </p>
+
+      <p class="details-item">
+        <svg-icon name="house-key"></svg-icon>
+        <span class="icon-caption">
+          {{ model().deliveryDate }}
+        </span>
+      </p>
+    </section>
+  </div>
+</article>

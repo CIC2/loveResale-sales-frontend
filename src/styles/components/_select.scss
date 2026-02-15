@@ -1,0 +1,45 @@
+.p-select {
+  width: 100%;
+
+  &.ng-touched.ng-invalid {
+    border-color: var(--error);
+  }
+}
+
+.projectSelect {
+  border: 0;
+
+  .p-select-label {
+    padding: 0;
+
+    &.p-select-label.p-placeholder {
+      color: black;
+      font-weight: 500;
+      font-size: var(--font-size-2);
+    }
+  }
+
+  .p-select-list-container {
+    max-height: max-content;
+
+    .p-select-list {
+      padding: 0.5rem;
+
+      .p-select-option {
+        border-radius: 0.2rem;
+
+
+        &:hover,
+        &:active,
+        &.p-focus {
+          background-color: var(--secondary) !important;
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+.p-component-overlay.p-component {
+  display: block;
+}

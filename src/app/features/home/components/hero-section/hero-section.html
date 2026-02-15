@@ -1,0 +1,103 @@
+<section class="hero-section">
+  <div class="hero-section__overlay"></div>
+  <div class="hero-section__content">
+    <h1 class="hero-section__title">
+      {{ 'home.heroSection.title' | transloco }}
+    </h1>
+    <p class="hero-section__subtitle">
+      {{ 'home.heroSection.subtitle' | transloco }}
+    </p>
+    
+    <div class="hero-section__search">
+      <div class="search-bar" [formGroup]="searchForm">
+        <div class="search-bar__row search-bar__row--main">
+          <div class="search-bar__input-wrapper">
+            <i class="pi pi-search search-bar__search-icon"></i>
+            <input
+              pInputText
+              type="text"
+              formControlName="searchQuery"
+              [placeholder]="'home.heroSection.searchPlaceholder' | transloco"
+              class="search-bar__input"
+            />
+          </div>
+          
+          <div class="search-bar__categories">
+            <button
+              type="button"
+              class="search-bar__category"
+              [class.search-bar__category--active]="selectedCategory() === 'residential'"
+              (click)="selectCategory('residential')"
+            >
+              {{ 'home.heroSection.categories.residential' | transloco }}
+            </button>
+            <button
+              type="button"
+              class="search-bar__category"
+              [class.search-bar__category--active]="selectedCategory() === 'coastal'"
+              (click)="selectCategory('coastal')"
+            >
+              {{ 'home.heroSection.categories.coastal' | transloco }}
+            </button>
+            <button
+              type="button"
+              class="search-bar__category"
+              [class.search-bar__category--active]="selectedCategory() === 'commercial'"
+              (click)="selectCategory('commercial')"
+            >
+              {{ 'home.heroSection.categories.commercial' | transloco }}
+            </button>
+          </div>
+          
+          <div class="search-bar__filters">
+              <p-select
+                [options]="propertyTypes"
+                formControlName="selectedType"
+                optionLabel="label"
+                styleClass="search-bar__dropdown search-bar__dropdown--inline"
+              >
+                <ng-template #selectedItem let-selectedOption>
+                  <span class="search-bar__filter-label">{{ 'home.heroSection.type' | transloco }}</span>
+                  <span class="search-bar__filter-value">{{ selectedOption?.label }}</span>
+                </ng-template>
+              </p-select>
+            
+              <p-select
+                [options]="areaOptions"
+                formControlName="selectedArea"
+                optionLabel="label"
+                styleClass="search-bar__dropdown search-bar__dropdown--inline"
+              >
+                <ng-template #selectedItem let-selectedOption>
+                  <span class="search-bar__filter-label">{{ 'home.heroSection.area' | transloco }}</span>
+                  <span class="search-bar__filter-value">{{ selectedOption?.label }}</span>
+                </ng-template>
+              </p-select>
+          </div>
+          
+          <p-button
+            [label]="'home.heroSection.search' | transloco"
+            icon="pi pi-search"
+            (onClick)="onSearch()"
+            styleClass="search-bar__button"
+          />
+        </div>
+        
+        <div class="search-bar__row search-bar__row--keywords">
+          <span class="search-bar__keywords-label">
+            {{ 'home.heroSection.popularKeywords' | transloco }}
+          </span>
+          @for (keyword of popularKeywords; track keyword) {
+            <button
+              type="button"
+              class="search-bar__keyword"
+              (click)="onKeywordClick(keyword)"
+            >
+              {{ 'home.heroSection.keywords.' + keyword | transloco }}
+            </button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

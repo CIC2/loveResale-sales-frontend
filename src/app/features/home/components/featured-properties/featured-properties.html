@@ -1,0 +1,175 @@
+<section class="featured-properties">
+  <div class="featured-properties__container">
+    <div class="featured-properties__header">
+      <h2 class="featured-properties__title">
+        {{ 'home.featuredProperties.title' | transloco }}
+      </h2>
+      <p-button
+        [label]="'home.featuredProperties.seeAllUnits' | transloco"
+        icon="pi pi-arrow-right"
+        iconPos="right"
+        class="featured-properties__view-all-btn"
+      />
+    </div>
+
+    <!-- Filters -->
+    <div class="featured-properties__filters" [formGroup]="filtersForm">
+      <p-select
+        [options]="typeOptions"
+        formControlName="selectedType"
+        optionLabel="label"
+        class="featured-properties__filter"
+      >
+        <ng-template #selectedItem let-selectedOption>
+          <div class="featured-properties__filter-content">
+            <span class="featured-properties__filter-label">
+              {{ 'home.featuredProperties.filters.type' | transloco }}
+            </span>
+            <span class="featured-properties__filter-value">{{ selectedOption?.label }}</span>
+          </div>
+        </ng-template>
+        <ng-template #item let-option>
+          {{ option.label }}
+        </ng-template>
+      </p-select>
+
+      <p-select
+        [options]="projectOptions"
+        formControlName="selectedProject"
+        optionLabel="label"
+        class="featured-properties__filter"
+      >
+        <ng-template #selectedItem let-selectedOption>
+          <div class="featured-properties__filter-content">
+            <span class="featured-properties__filter-label">
+              {{ 'home.featuredProperties.filters.project' | transloco }}
+            </span>
+            <span class="featured-properties__filter-value">{{ selectedOption?.label }}</span>
+          </div>
+        </ng-template>
+        <ng-template #item let-option>
+          {{ option.label }}
+        </ng-template>
+      </p-select>
+
+      <p-select
+        [options]="bedroomOptions"
+        formControlName="selectedBedrooms"
+        optionLabel="label"
+        class="featured-properties__filter"
+      >
+        <ng-template #selectedItem let-selectedOption>
+          <div class="featured-properties__filter-content">
+            <span class="featured-properties__filter-label">
+              {{ 'home.featuredProperties.filters.bedrooms' | transloco }}
+            </span>
+            <span class="featured-properties__filter-value">{{ selectedOption?.label }}</span>
+          </div>
+        </ng-template>
+        <ng-template #item let-option>
+          {{ option.label }}
+        </ng-template>
+      </p-select>
+
+      <p-select
+        [options]="bathroomOptions"
+        formControlName="selectedBathrooms"
+        optionLabel="label"
+        class="featured-properties__filter"
+      >
+        <ng-template #selectedItem let-selectedOption>
+          <div class="featured-properties__filter-content">
+            <span class="featured-properties__filter-label">
+              {{ 'home.featuredProperties.filters.baths' | transloco }}
+            </span>
+            <span class="featured-properties__filter-value">{{ selectedOption?.label }}</span>
+          </div>
+        </ng-template>
+        <ng-template #item let-option>
+          {{ option.label }}
+        </ng-template>
+      </p-select>
+
+      <p-select
+        [options]="priceOptions"
+        formControlName="selectedPrice"
+        optionLabel="label"
+        class="featured-properties__filter"
+      >
+        <ng-template #selectedItem let-selectedOption>
+          <div class="featured-properties__filter-content">
+            <span class="featured-properties__filter-label">
+              {{ 'home.featuredProperties.filters.price' | transloco }}
+            </span>
+            <span class="featured-properties__filter-value">{{ selectedOption?.label }}</span>
+          </div>
+        </ng-template>
+        <ng-template #item let-option>
+          {{ option.label }}
+        </ng-template>
+      </p-select>
+    </div>
+
+    <div class="featured-properties__grid">
+      @for (property of properties; track property.id) {
+        <div class="property-card">
+          <div class="property-card__image-wrapper">
+            <img [src]="property.image" [alt]="property.title" class="property-card__image" />
+            
+            <!-- Carousel Dots -->
+            <div class="property-card__dots">
+              @for (dot of [1, 2, 3, 4, 5]; track dot) {
+                <span 
+                  class="property-card__dot"
+                  [class.property-card__dot--active]="dot === 1"
+                ></span>
+              }
+            </div>
+
+            <!-- Favorite Button -->
+            <button 
+              type="button"
+              class="property-card__favorite"
+              [class.property-card__favorite--active]="property.isFavorite"
+              (click)="toggleFavorite(property.id)"
+              [attr.aria-label]="'home.featuredProperties.favorite' | transloco"
+            >
+              <svg-icon 
+                name="heart"
+                class="property-card__favorite-icon"
+              ></svg-icon>
+            </button>
+
+            <!-- Price Badge -->
+            <div class="property-card__price-badge">
+              <span class="property-card__price">{{ property.price }}</span>
+              <span class="property-card__currency">EGP</span>
+            </div>
+          </div>
+          
+          <div class="property-card__content">
+            <span class="property-card__location">{{ property.location }}</span>
+            <h3 class="property-card__title">{{ property.title }}</h3>
+            
+            <div class="property-card__details">
+              <div class="property-card__detail">
+                <span class="property-card__detail-value">{{ property.beds }}</span>
+                <span class="property-card__detail-label">{{ 'home.featuredProperties.bedrooms' | transloco }}</span>
+              </div>
+              <div class="property-card__detail">
+                <span class="property-card__detail-value">{{ property.baths }}</span>
+                <span class="property-card__detail-label">{{ 'home.featuredProperties.bathrooms' | transloco }}</span>
+              </div>
+              <div class="property-card__detail">
+                <span class="property-card__detail-value">{{ property.area }}</span>
+              </div>
+              <div class="property-card__detail">
+                <span class="property-card__detail-label">{{ property.status }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

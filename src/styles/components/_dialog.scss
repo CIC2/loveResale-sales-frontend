@@ -1,0 +1,95 @@
+.nominationDialog {
+  width: 80%;
+
+  .p-dialog-content {
+    padding: 0;
+  }
+}
+
+.success-popup {
+  .p-dialog-content {
+    padding: 0;
+  }
+}
+
+.purchaseReason {
+  .p-dialog-content {
+    padding: 1rem;
+  }
+}
+
+.scheduleMeeting {
+  width: 40rem;
+
+  .p-dialog-content {
+    overflow: unset;
+  }
+}
+
+.termsPopup {
+  .p-dialog-content {
+    border-radius: 0.75rem;
+  }
+}
+
+.chooseMeeting {
+  width: 49.063rem;
+
+  .p-dialog-header,
+  .p-dialog-content {
+    padding: 0;
+  }
+}
+
+.authDialog {
+  width: 60rem;
+  padding: 0;
+  height: 45.5rem;
+
+  .p-dialog-header,
+  .p-dialog-content {
+    padding: 0;
+  }
+
+  .p-dialog-content {
+    height: 100%;
+    // padding: 1rem;
+  }
+}
+
+.meetingScheduler {
+  .p-dialog-content {
+    padding: 1rem;
+  }
+}
+
+.feedbackPopup {
+  width: 54rem;
+  padding: 0;
+
+  .p-dialog-header,
+  .p-dialog-content {
+    padding: 0;
+  }
+
+  .p-dialog-content {
+    height: 100%;
+    // padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .authDialog {
+    max-height: max-content;
+    width: 97%;
+    height: auto;
+  }
+
+  .nominationDialog {
+    max-width: auto;
+    max-height: auto;
+    overflow-y: auto;
+  }
+}
+
+.chooseMeeting .p-dialog-header {}

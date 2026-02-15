@@ -1,0 +1,48 @@
+<form [formGroup]="mobileForm">
+  <div
+    class="auth__phone"
+    [class.invalid]="
+      mobileForm.get('phoneNumber')?.invalid &&
+      (mobileForm.get('phoneNumber')?.touched ||
+        mobileForm.get('phoneNumber')?.dirty)
+    "
+  >
+    <p-select
+      class="auth__phone-select"
+      [options]="allCountries"
+      optionLabel="name"
+      [filter]="true"
+      [filterBy]="'name,dialCode,iso2'"
+      [loading]="loadingCountry()"
+      formControlName="code"
+      appendTo="body"
+    >
+      <ng-template #selectedItem let-selectedOption>
+        <div class="auth__phone-item">
+          <i class="fi fi-{{ selectedOption.iso2 }}"></i>
+          <span>{{ selectedOption.dialCode }}</span>
+        </div>
+      </ng-template>
+
+      <ng-template let-country #item>
+        <div class="auth__phone-item">
+          <i class="fi fi-{{ country.iso2 }}"></i>
+          <span>{{ country.name }}</span>
+          <span>{{ country.dialCode }}</span>
+        </div>
+      </ng-template>
+    </p-select>
+    <p-inputnumber
+      class="auth__phone-input"
+      [placeholder]="placeholder()"
+      id="phoneNumber"
+      formControlName="phoneNumber"
+      autocomplete="off"
+      mode="decimal"
+      [useGrouping]="false"
+    />
+  </div>
+  <validation-error
+    [control]="mobileForm.controls['phoneNumber']"
+  ></validation-error>
+</form>

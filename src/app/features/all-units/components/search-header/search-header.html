@@ -1,0 +1,101 @@
+<section class="search-header">
+  <!-- Breadcrumb -->
+  <nav class="search-header__breadcrumb" aria-label="Breadcrumb">
+    <a href="/" class="search-header__breadcrumb-link">
+      {{ 'common.home' | transloco }}
+    </a>
+    <span class="search-header__breadcrumb-separator">›</span>
+    <span class="search-header__breadcrumb-current">
+      {{ 'allUnits.breadcrumb.findProperty' | transloco }}
+    </span>
+  </nav>
+
+  <!-- Title -->
+  <h1 class="search-header__title">
+    {{ 'allUnits.title' | transloco }}
+  </h1>
+
+  <!-- Search Bar -->
+  <div class="search-header__search-bar" [formGroup]="searchForm">
+    <div class="search-header__search-row">
+      <!-- Search Input -->
+      <div class="search-header__input-wrapper">
+        <svg-icon name="search" class="search-header__search-icon"></svg-icon>
+        <input
+          pInputText
+          type="text"
+          formControlName="searchQuery"
+          [placeholder]="'allUnits.searchPlaceholder' | transloco"
+          class="search-header__input"
+        />
+      </div>
+
+      <!-- Categories -->
+      <div class="search-header__categories">
+        @for (cat of categories; track cat.key) {
+          <button
+            type="button"
+            class="search-header__category"
+            [class.search-header__category--active]="selectedCategory() === cat.key"
+            (click)="selectCategory(cat.key)"
+          >
+            {{ cat.label | transloco }}
+          </button>
+        }
+      </div>
+
+      <!-- Filters -->
+      <div class="search-header__filters">
+        <p-select
+          [options]="typeOptions()"
+          formControlName="selectedType"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="search-header__dropdown search-header__dropdown--inline"
+        >
+          <ng-template #selectedItem let-selectedOption>
+            <span class="search-header__filter-label">{{ 'allUnits.filters.type' | transloco }}</span>
+            <span class="search-header__filter-value">{{ selectedOption?.label }}</span>
+          </ng-template>
+        </p-select>
+        
+        <p-select
+          [options]="projectOptions()"
+          formControlName="selectedProject"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="search-header__dropdown search-header__dropdown--inline"
+        >
+          <ng-template #selectedItem let-selectedOption>
+            <span class="search-header__filter-label">{{ 'allUnits.filters.project' | transloco }}</span>
+            <span class="search-header__filter-value">{{ selectedOption?.label }}</span>
+          </ng-template>
+        </p-select>
+      </div>
+
+      <!-- Search Button -->
+      <p-button
+        [label]="'common.search' | transloco"
+        icon="pi pi-search"
+        (onClick)="onSearch()"
+        styleClass="search-header__button"
+      />
+    </div>
+
+    <!-- Popular Keywords -->
+    <div class="search-header__keywords">
+      <span class="search-header__keywords-label">
+        {{ 'allUnits.popularKeywords' | transloco }}
+      </span>
+      @for (keyword of popularKeywords(); track keyword) {
+        <button
+          type="button"
+          class="search-header__keyword"
+          (click)="onKeywordClick(keyword)"
+        >
+          {{ 'allUnits.keywords.' + keyword | transloco }}
+        </button>
+      }
+    </div>
+  </div>
+</section>

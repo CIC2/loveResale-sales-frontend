@@ -1,0 +1,10 @@
+.p-breadcrumb-list {
+    font-size: var(--font-size-1);
+    font-weight: 500;
+
+    li:last-child {
+        * {
+            color: var(--primary);
+        }
+    }
+}

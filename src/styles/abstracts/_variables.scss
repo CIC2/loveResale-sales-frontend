@@ -1,0 +1,116 @@
+:root {
+  /* Primary Colors - From Figma Design System */
+  --primary-50: #e6eef3;
+  --primary-100: #d8f3dc;
+  --primary-200: #b7e4c7;
+  --primary-300: #95d5b2;
+  --primary-400: #74c69d;
+  --primary-500: #52b788;
+  --primary-600: #40916c;
+  --primary-700: #2d6a4f;
+  --primary-800: #1b4332;
+  --primary-900: #081c15;
+  --primary: #2d6a4f; /* Main primary color (700) */
+  --primary-5: rgba(45, 106, 79, 0.05); /* 5% opacity */
+  
+  /* Secondary Colors */
+  --secondary: #af7e3c;
+  --secondary-light: #c69858;
+  --secondary-dark: #8f6830;
+  
+  /* Neutral Colors */
+  --dark: #313131;
+  --white: #ffffff;
+  --black: #000000;
+  
+  /* Gray Scale */
+  --gray: #eeeeee;
+  --gray-30: rgba(238, 238, 238, 0.3); /* 30% opacity */
+  --gray-light: #8c8c8c;
+  --gray-light-30: rgba(238, 238, 238, 0.3); /* 30% opacity */
+  --gray-lighter: #efefef;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #fafafa;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --gray-950: #0d111c;
+  
+  /* Additional Colors */
+  --silver: #7f8284;
+  --error: #ef4444;
+  --error-light: #fee2e2;
+  --error-dark: #dc2626;
+  --success: #52b67c;
+  --success-light: #d1fae5;
+  --success-dark: #16a34a;
+  --warning: #f59e0b;
+  --warning-light: #fef3c7;
+  --warning-dark: #d97706;
+  --info: #3b82f6;
+  --info-light: #dbeafe;
+  --info-dark: #2563eb;
+  --blue: #e3eef7;
+  
+  /* Surface Colors */
+  --surface-0: #ffffff;
+  --surface-50: #f9fafb;
+  --surface-100: #f3f4f6;
+  --surface-200: #e5e7eb;
+  --surface-300: #d1d5db;
+  --surface-400: #9ca3af;
+  --surface-500: #6b7280;
+  --surface-600: #4b5563;
+  --surface-700: #374151;
+  --surface-800: #1f2937;
+  --surface-900: #111827;
+  --surface-950: #0d111c;
+  
+  /* Card & Component Colors */
+  --card-bg: #ffffff;
+  --card-overlay-bg: rgba(255, 255, 255, 0.9);
+  --icon-bg: #f3f4f6;
+  --icon-hover-bg: #e5e7eb;
+  
+  /* Text Colors */
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --text-inverse: #ffffff;
+  
+  /* Border Colors */
+  --border-color: #e5e7eb;
+  --border-color-hover: #d1d5db;
+  --border-color-focus: #52b788;
+
+  --font-size-0: 0.75rem; /* 12px */
+  --font-size-1: 0.875rem; /* 14px */
+  --font-size-2: 1rem; /* 16px */
+  --font-size-3: 1.125rem; /* 18px */
+  --font-size-4: 1.25rem; /* 20px */
+  --font-size-5: 1.5rem; /* 24px */
+  --font-size-6: 1.875rem; /* 30px */
+  --font-size-7: 2.25rem; /* 36px */
+  --font-size-8: 3rem; /* 48px */
+  --font-size-9: 3.75rem; /* 60px */
+  --font-size-10: 4.5rem; /* 72px */
+  --font-size-11: 6rem; /* 96px */
+  --font-size-12: 8rem; /* 128px */
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: var(--font-size-1);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: var(--font-size-0);
+  }
+}

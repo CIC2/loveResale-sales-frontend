@@ -1,0 +1,145 @@
+.unit-gallery {
+  width: 100%;
+  padding: 0 2.75rem;
+  background-color: var(--white);
+
+  @media (max-width: 48rem) {
+    padding: 0 1rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    max-width: 90rem;
+    margin: 0 auto;
+    height: 38.4375rem;
+
+    @media (max-width: 64rem) {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+  }
+
+  &__main {
+    margin: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 100%;
+
+    @media (max-width: 64rem) {
+      height: 20rem;
+    }
+  }
+
+  &__main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__share-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    font-size: var(--font-size-1);
+    font-weight: 500;
+    color: var(--text-primary);
+    cursor: pointer;
+    margin-top: -4rem;
+    margin-inline-start: 1rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: var(--gray-50);
+    }
+  }
+
+  &__share-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &__thumbnails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    height: 100%;
+
+    @media (max-width: 64rem) {
+      grid-template-columns: repeat(4, 1fr);
+      height: 8rem;
+    }
+
+    @media (max-width: 48rem) {
+      grid-template-columns: repeat(2, 1fr);
+      height: auto;
+    }
+  }
+
+  &__thumb {
+    margin: 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &--active {
+      outline: 0.1875rem solid var(--primary);
+      outline-offset: 0.125rem;
+    }
+  }
+
+  &__thumb-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__see-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: var(--white);
+    font-size: var(--font-size-1);
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: -100%;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &__photo-count {
+    font-size: var(--font-size-5);
+    font-weight: 700;
+  }
+}
+
+// RTL Support
+[dir='rtl'] {
+  .unit-gallery {
+    &__share-btn {
+      flex-direction: row-reverse;
+    }
+  }
+}

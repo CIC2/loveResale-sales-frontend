@@ -1,0 +1,48 @@
+<app-contact-form />
+<footer class="footer">
+  <div class="footer__container">
+    <!-- Footer Main -->
+    <div class="footer__main">
+      <!-- Logo -->
+      <div class="footer__brand">
+        <svg-icon name="homefly-logo" class="footer__logo" aria-label="Homefly Logo"></svg-icon>
+      </div>
+
+      <!-- Footer Links Sections -->
+      <div class="footer__sections">
+        @for (section of footerSections; track section.title + '-' + $index) {
+        <div class="footer__section">
+          <h3 class="footer__section-title">
+            {{ section.title | transloco }}
+          </h3>
+          <ul class="footer__links">
+            @for (link of section.links; track link.route) {
+            <li class="footer__link-item">
+              <a [routerLink]="link.route" class="footer__link">
+                {{ link.label }}
+              </a>
+            </li>
+            }
+          </ul>
+        </div>
+        }
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer__social">
+        @for (social of socialLinks; track social.name) {
+        <a [href]="social.url" [attr.aria-label]="social.name" class="footer__social-link" target="_blank"
+          rel="noopener noreferrer">
+          <svg-icon [name]="social.icon" class="'footer__social-icon'"></svg-icon>
+        </a>
+        }
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer Bottom -->
+<div class="footer__bottom">
+  <p class="footer__copyright">
+    Copyrights © {{ currentYear }} All Rights Reserved by Homefly.
+  </p>
+</div>

@@ -1,0 +1,16 @@
+<article class="unit-features">
+  <h2 class="unit-features__title">
+    {{ 'modelDetails.unitFeatures.title' | transloco }}
+  </h2>
+
+  <div class="unit-features__grid">
+    @for (feature of features(); track $index) {
+      <div class="unit-features__item">
+        <div class="unit-features__icon-wrapper">
+          <svg-icon [name]="feature.icon" class="unit-features__icon" />
+        </div>
+        <span class="unit-features__label">{{ feature.label | transloco }}</span>
+      </div>
+    }
+  </div>
+</article>

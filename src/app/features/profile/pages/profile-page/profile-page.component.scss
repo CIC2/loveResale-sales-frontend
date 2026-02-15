@@ -1,0 +1,100 @@
+.profile-page {
+  background-color: var(--surface-50);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-page__hero {
+  background-color: var(--surface-100);
+  padding-block: 1.5rem;
+}
+
+.profile-page__hero-inner {
+  max-width: 94.5rem;
+  margin-inline: auto;
+  padding-inline: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-page__hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-page__hero-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-page__title {
+  color: var(--primary);
+  font-size: var(--font-size-7);
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile-page__logo {
+  width: 14.5rem;
+  height: 4.5rem;
+}
+
+.profile-page__content {
+  padding-block: 1rem 4rem;
+}
+
+.profile-page__content-inner {
+  max-width: 94.5rem;
+  margin-inline: auto;
+  padding-inline: 2.75rem;
+  display: grid;
+  grid-template-columns: minmax(16rem, 20rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+:host ::ng-deep .profile-page__breadcrumb.p-breadcrumb {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+:host ::ng-deep .profile-page__breadcrumb .p-breadcrumb-list {
+  font-size: var(--font-size-1);
+  color: var(--text-secondary);
+}
+
+:host ::ng-deep .profile-page__breadcrumb .p-menuitem-text {
+  color: inherit;
+}
+
+@media (max-width: 75rem) {
+  .profile-page__hero-inner,
+  .profile-page__content-inner {
+    padding-inline: 1.5rem;
+  }
+
+  .profile-page__title {
+    font-size: var(--font-size-6);
+  }
+
+  .profile-page__content-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  .profile-page__hero-row {
+    align-items: flex-start;
+  }
+
+  .profile-page__logo {
+    width: 10rem;
+    height: 3.25rem;
+  }
+}

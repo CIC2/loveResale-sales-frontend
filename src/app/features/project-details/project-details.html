@@ -1,0 +1,58 @@
+<section class="project-details">
+  <!-- Hero Section -->
+  <app-project-hero
+    [projectName]="projectName()"
+    [imageUrl]="heroImageUrl()"
+    class="project-details__hero"
+  />
+
+  <!-- Main Content -->
+  <div class="project-details__content">
+    <div class="project-details__container">
+      <!-- Left Column - Main Info -->
+      <main class="project-details__main">
+        <!-- Overview -->
+        <app-project-overview
+          [description]="overviewText()"
+          (learnMoreClick)="onLearnMore()"
+          class="project-details__section"
+        />
+
+        <!-- Project Features -->
+        <app-project-features
+          [features]="projectFeatures()"
+          class="project-details__section"
+        />
+
+        <!-- Model Types -->
+        <app-model-types-carousel
+          [modelTypes]="modelTypes()"
+          (modelTypeClick)="onModelTypeClick($event)"
+          (prevClick)="onPrevModelTypes()"
+          (nextClick)="onNextModelTypes()"
+          class="project-details__section"
+        />
+
+        <!-- Map -->
+        <app-project-map class="project-details__section" />
+
+        <!-- Gallery -->
+        <app-project-gallery
+          [images]="galleryImages()"
+          class="project-details__section"
+        />
+
+        <!-- Contact Form Section -->
+        <app-project-contact-form
+          (formSubmit)="onContactFormSubmit($event)"
+          class="project-details__section project-details__contact-section"
+        />
+      </main>
+
+      <!-- Right Column - About Project Sidebar -->
+      <aside class="project-details__sidebar">
+        <app-about-project-sidebar [infoItems]="aboutProjectInfo()" />
+      </aside>
+    </div>
+  </div>
+</section>

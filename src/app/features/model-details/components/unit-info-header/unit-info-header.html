@@ -1,0 +1,42 @@
+<article class="unit-info-header">
+  <div class="unit-info-header__inner">
+    <!-- Breadcrumbs -->
+    <nav class="unit-info-header__breadcrumbs" aria-label="Breadcrumb">
+      @for (crumb of breadcrumbs; track $index) {
+        <span class="unit-info-header__breadcrumb-item">
+          {{ crumb.label | transloco }}
+        </span>
+        @if ($index < breadcrumbs.length - 1) {
+          <span class="unit-info-header__breadcrumb-separator">/</span>
+        }
+      }
+    </nav>
+
+    <!-- Title -->
+    <h1 class="unit-info-header__title">
+      {{ unitTitle }}
+    </h1>
+
+    <!-- Address -->
+    <p class="unit-info-header__address">
+      {{ unitAddress }}
+    </p>
+
+    <!-- Property Attributes -->
+    <div class="unit-info-header__attributes">
+      @for (attr of propertyAttributes; track $index) {
+        <div class="unit-info-header__attribute">
+          <div class="unit-info-header__attribute-icon">
+            <svg-icon [name]="attr.icon" class="unit-info-header__icon" />
+          </div>
+          <div class="unit-info-header__attribute-info">
+            @if (attr.value) {
+              <span class="unit-info-header__attribute-value">{{ attr.value }}</span>
+            }
+            <span class="unit-info-header__attribute-label">{{ attr.label | transloco }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</article>

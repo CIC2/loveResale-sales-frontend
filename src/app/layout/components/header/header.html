@@ -1,0 +1,121 @@
+<header class="header">
+  <div class="header__container">
+    <!-- Logo -->
+    <a routerLink="/" class="header__logo">
+      <svg-icon 
+        name="homefly-logo" 
+        [svgClass]="'header__logo-icon'"
+        aria-label="Homefly Logo"
+      ></svg-icon>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="header__nav">
+      @for (item of navItems; track item.route) {
+        <a
+          [routerLink]="item.route"
+          [routerLinkActive]="'header__nav-link--active'"
+          [routerLinkActiveOptions]="{ exact: item.exact || false }"
+          class="header__nav-link"
+        >
+          {{ item.label | transloco }}
+        </a>
+      }
+    </nav>
+
+    <!-- Desktop Actions -->
+    <div class="header__actions">
+      <p-button
+        class="header__notf-btn"
+        variant="text"
+        aria-label="Notifications"
+      >
+        <svg-icon name="notification"></svg-icon>
+      </p-button>
+
+      <!-- Auth Actions -->
+      @if (userState.currentUser(); as user) {
+        <!-- User Menu -->
+        <div class="header__user-menu">
+          <p-button
+            label="My Account"
+            icon="pi pi-user"
+            styleClass="header__user-btn"
+            [text]="true"
+            (click)="navigateToProfile()"
+          />
+        </div>
+      } @else {
+        <!-- Login Button -->
+        <p-button
+          [label]="'header.login' | transloco"
+          routerLink="/auth/login"
+          styleClass="header__login-btn"
+          [outlined]="true"
+          (click)="openSignIn()"
+        />
+      }
+      <!-- Language Switcher -->
+      <button
+        type="button"
+        (click)="changeLang()"
+        class="header__lang-btn"
+        [attr.aria-label]="'header.actions.arabic' | transloco"
+      >
+        {{ 'header.lang' | transloco }}
+      </button>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button
+      type="button"
+      (click)="toggleMenu()"
+      class="header__menu-toggle"
+      [attr.aria-label]="'Toggle menu'"
+      [attr.aria-expanded]="isMenuOpen"
+    >
+      <svg-icon 
+        name="menu" 
+        [svgClass]="'header__menu-icon'"
+      ></svg-icon>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  @if (isMenuOpen) {
+    <div class="header__mobile-nav">
+      <nav class="header__mobile-nav-list">
+        @for (item of navItems; track item.route) {
+          <a
+            [routerLink]="item.route"
+            [routerLinkActive]="'header__mobile-nav-link--active'"
+            [routerLinkActiveOptions]="{ exact: item.exact || false }"
+            class="header__mobile-nav-link"
+            (click)="toggleMenu()"
+          >
+            {{ item.label | transloco }}
+          </a>
+        }
+      </nav>
+
+      <div class="header__mobile-actions">
+        <button
+          type="button"
+          (click)="changeLang()"
+          class="header__mobile-lang-btn"
+        >
+          {{ 'header.lang' | transloco }}
+        </button>
+
+        @if (!userState.currentUser()) {
+          <p-button
+            [label]="'header.login' | transloco"
+            routerLink="/auth/login"
+            styleClass="header__mobile-login-btn"
+            (click)="toggleMenu()"
+          />
+        }
+      </div>
+    </div>
+  }
+</header>

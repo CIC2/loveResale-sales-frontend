@@ -1,0 +1,124 @@
+.property-categories {
+  padding: 3rem 2rem;
+  background: var(--white);
+
+  &__container {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.category-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+
+  &:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+
+    .category-card__overlay {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__image-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: -100%;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+    margin-bottom: -100%;
+  }
+
+  &__content {
+    padding: 2rem 1.5rem;
+    color: var(--white);
+    z-index: 1;
+    margin-top: auto;
+  }
+
+  &__title {
+    font-size: var(--font-size-4);
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--white);
+  }
+
+  &__description {
+    font-size: var(--font-size-2);
+    margin: 0;
+    color: var(--white);
+    opacity: 0.9;
+  }
+}
+
+// Responsive Design
+@media (max-width: 64rem) {
+  .property-categories {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  .property-categories {
+    padding: 2rem 1rem;
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  .category-card {
+    height: 16rem;
+
+    &__content {
+      padding: 1.5rem 1rem;
+    }
+
+    &__title {
+      font-size: var(--font-size-3);
+    }
+
+    &__description {
+      font-size: var(--font-size-1);
+    }
+  }
+}
+
+// RTL Support
+[dir='rtl'] {
+  .category-card {
+    &__content {
+      direction: rtl;
+    }
+  }
+}

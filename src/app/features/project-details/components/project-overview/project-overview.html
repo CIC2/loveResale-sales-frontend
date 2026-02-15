@@ -1,0 +1,15 @@
+<div class="project-overview">
+  <h2 class="project-overview__title">{{ 'projectPage.overview.title' | transloco }}</h2>
+  
+  <div class="project-overview__content">
+    <p class="project-overview__description">{{ description() }}</p>
+    
+    <div class="project-overview__actions">
+      <p-button
+        [label]="'projectPage.overview.learnMore' | transloco"
+        severity="primary"
+        (onClick)="onLearnMore()"
+      />
+    </div>
+  </div>
+</div>

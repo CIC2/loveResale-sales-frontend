@@ -1,0 +1,32 @@
+<div class="payment-methods">
+  <div class="payment-methods__header">
+    <h2 class="payment-methods__title">
+      {{ 'payment.methods.title' | transloco }}
+    </h2>
+    <button class="payment-methods__icon-btn">
+      <svg-icon name="arrow" [svgClass]="'payment-methods__icon'"></svg-icon>
+    </button>
+  </div>
+
+  <div class="payment-methods__options">
+    <button 
+      class="payment-methods__option"
+      [class.payment-methods__option--selected]="selectedMethod() === 'card'"
+      (click)="selectMethod('card')"
+    >
+      <span class="payment-methods__option-text">
+        {{ 'payment.methods.payWithCard' | transloco }}
+      </span>
+    </button>
+
+    <button 
+      class="payment-methods__option"
+      [class.payment-methods__option--selected]="selectedMethod() === 'bank'"
+      (click)="selectMethod('bank')"
+    >
+      <span class="payment-methods__option-text">
+        {{ 'payment.methods.bankTransfer' | transloco }}
+      </span>
+    </button>
+  </div>
+</div>

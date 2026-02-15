@@ -1,0 +1,27 @@
+<article class="payment-plan">
+  <h2 class="payment-plan__title">
+    {{ 'modelDetails.paymentPlan.title' | transloco }}
+  </h2>
+
+  <div class="payment-plan__grid">
+    <!-- Total Price -->
+    <div class="payment-plan__field">
+      <span class="payment-plan__label">
+        {{ 'modelDetails.paymentPlan.totalPrice' | transloco }}
+      </span>
+      <span class="payment-plan__value">
+        {{ paymentInfo().totalPrice | number:'1.0-0' }} {{ paymentInfo().currency }}
+      </span>
+    </div>
+
+    <!-- Down Payment -->
+    <div class="payment-plan__field">
+      <span class="payment-plan__label">
+        {{ 'modelDetails.paymentPlan.downPayment' | transloco }}
+      </span>
+      <span class="payment-plan__value">
+        {{ paymentInfo().downPayment | number:'1.0-0' }} {{ paymentInfo().currency }}
+      </span>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,55 @@
+.auth {
+  &__phone {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    direction: ltr;
+
+    &.invalid {
+      border-color: var(--error) !important;
+    }
+  }
+
+  &__phone-select {
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  &__phone-input {
+    flex: 1;
+  }
+
+  &__phone-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: none !important;
+  }
+}
+
+::ng-deep {
+  .p-select {
+    width: max-content;
+  }
+
+  .p-select-dropdown {
+    justify-content: start;
+    width: max-content;
+  }
+
+  .p-select-list-container {
+    width: 15rem !important;
+  }
+
+  .p-select-label {
+    display: flex;
+    padding-left: 6px !important;
+    padding: 0.2rem;
+  }
+
+  .p-inputnumber-input {
+    border: 0;
+  }
+}

@@ -1,0 +1,32 @@
+<aside class="profile-sidebar">
+  @for (section of sections; track section.titleKey) {
+    <div class="profile-sidebar__section">
+      <p class="profile-sidebar__section-title">
+        {{ section.titleKey | transloco }}
+      </p>
+      <div class="profile-sidebar__items">
+        @for (item of section.items; track item.key) {
+          <p-button
+            type="button"
+            styleClass="profile-sidebar__item"
+            [text]="true"
+            [ngClass]="{
+              'profile-sidebar__item--active': item.key === activeKey
+            }"
+          >
+            <span class="profile-sidebar__item-content" pButtonLabel>
+              <svg-icon
+                [name]="item.icon"
+                [svgClass]="'profile-sidebar__item-icon'"
+                aria-hidden="true"
+              ></svg-icon>
+              <span class="profile-sidebar__item-label">
+                {{ item.labelKey | transloco }}
+              </span>
+            </span>
+          </p-button>
+        }
+      </div>
+    </div>
+  }
+</aside>

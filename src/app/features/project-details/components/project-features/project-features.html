@@ -1,0 +1,18 @@
+<div class="project-features">
+  <h2 class="project-features__title">{{ 'projectPage.features.title' | transloco }}</h2>
+  
+  <div class="project-features__grid">
+    @for (feature of features(); track feature.label) {
+      <div class="project-features__item">
+        <div class="project-features__icon-wrapper">
+          <svg-icon
+            [name]="feature.icon"
+            [svgStyle]="{ width: '1.5rem', height: '1.5rem' }"
+            class="project-features__icon"
+          />
+        </div>
+        <span class="project-features__label">{{ feature.label | transloco }}</span>
+      </div>
+    }
+  </div>
+</div>

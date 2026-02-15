@@ -1,0 +1,125 @@
+<aside class="contact-salesman">
+  <!-- Customer Count Section -->
+  <div class="contact-salesman__customer-count">
+    <h3 class="contact-salesman__customer-count-title">
+      {{ 'modelDetails.contactSalesman.customerCount' | transloco }}
+    </h3>
+    <div class="contact-salesman__customer-count-value">
+      {{ customerCount() }}
+    </div>
+  </div>
+
+  <!-- Reserve Section -->
+  <div class="contact-salesman__reserve">
+    <h3 class="contact-salesman__reserve-title">
+      {{ 'modelDetails.contactSalesman.reserve' | transloco }}
+    </h3>
+
+    <form [formGroup]="reserveForm" class="contact-salesman__form">
+      <!-- Payment -->
+      <div class="contact-salesman__field">
+        <label class="contact-salesman__label" for="payment">
+          {{ 'modelDetails.contactSalesman.payment' | transloco }}
+        </label>
+        <p-select
+          id="payment"
+          formControlName="payment"
+          [options]="paymentOptions()"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="contact-salesman__select"
+        />
+      </div>
+
+      <!-- Finishing -->
+      <div class="contact-salesman__field">
+        <label class="contact-salesman__label" for="finishing">
+          {{ 'modelDetails.contactSalesman.finishing' | transloco }}
+        </label>
+        <p-select
+          id="finishing"
+          formControlName="finishing"
+          [options]="finishingOptions()"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="contact-salesman__select"
+        />
+      </div>
+
+      <!-- Maintenance -->
+      <div class="contact-salesman__field">
+        <label class="contact-salesman__label" for="maintenance">
+          {{ 'modelDetails.contactSalesman.maintenance' | transloco }}
+        </label>
+        <p-select
+          id="maintenance"
+          formControlName="maintenance"
+          [options]="maintenanceOptions()"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="contact-salesman__select"
+        />
+      </div>
+
+      <!-- ROI Discount -->
+      <div class="contact-salesman__field">
+        <label class="contact-salesman__label" for="roiDiscount">
+          {{ 'modelDetails.contactSalesman.roiDiscount' | transloco }}
+        </label>
+        <input
+          pInputText
+          id="roiDiscount"
+          formControlName="roiDiscount"
+          class="contact-salesman__input"
+          [placeholder]="'modelDetails.contactSalesman.roiDiscountPlaceholder' | transloco"
+        />
+      </div>
+
+      <!-- Reservation and Delivery (Side by Side) -->
+      <div class="contact-salesman__display-row">
+        <div class="contact-salesman__display-field">
+          <label class="contact-salesman__display-label">
+            {{ 'modelDetails.contactSalesman.reservation' | transloco }}
+          </label>
+          <div class="contact-salesman__display-value">
+            {{ reservationAmount() }}
+          </div>
+        </div>
+
+        <div class="contact-salesman__display-field">
+          <label class="contact-salesman__display-label">
+            {{ 'modelDetails.contactSalesman.delivery' | transloco }}
+          </label>
+          <div class="contact-salesman__display-value">
+            {{ deliveryPeriod() }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Total Price -->
+      <div class="contact-salesman__total-price">
+        <label class="contact-salesman__total-label">
+          {{ 'modelDetails.contactSalesman.totalPrice' | transloco }}
+        </label>
+        <div class="contact-salesman__total-value">
+          {{ totalPrice() }}
+        </div>
+      </div>
+    </form>
+
+    <!-- Action Buttons -->
+    <div class="contact-salesman__actions">
+      <p-button
+        [label]="'modelDetails.contactSalesman.viewInstallmentPlan' | transloco"
+        (onClick)="onViewInstallmentPlan()"
+        styleClass="contact-salesman__btn--primary"
+      />
+      <p-button
+        [label]="'modelDetails.contactSalesman.reserveUnit' | transloco"
+        (onClick)="onReserveUnit()"
+        styleClass="contact-salesman__btn--outline"
+        [outlined]="true"
+      />
+    </div>
+  </div>
+</aside>
