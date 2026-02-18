@@ -1,20 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vso-dev-customer-front-app
+  name: resale-dev-sales-front-app
+  namespace: dev-resale
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vso-dev-customer-front-app
+      app: resale-dev-sales-front-app
   template:
     metadata:
       labels:
-        app: vso-dev-customer-front-app
+        app: resale-dev-sales-front-app
     spec:
+      imagePullSecrets:
+        - name: icr-secret
       containers:
-        - name: vso-dev-customer-front-app
-          image: webapp:1
+        - name: resale-dev-sales-front-app
+          image: de.icr.io/dev-registry/loveresale-sales-frontend:latest
           # env:
           #   - name: BANK_URL
           #     valueFrom:
@@ -41,9 +44,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: vso-dev-customer-front-service-cip
+  name: resale-dev-sales-front-service-cip
+  namespace: dev-resale
   labels:
-    app: vso-dev-customer-front-app
+    app: resale-dev-sales-front-app
 spec:
   type: ClusterIP
   ports:
@@ -52,7 +56,7 @@ spec:
       targetPort: 80
   # label keys and values that must match in order to receive traffic for this service
   selector:
-    app: vso-dev-customer-front-app
+    app: resale-dev-sales-front-app
 # ---
 # apiVersion: v1
 # kind: Service
