@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://localhost",
+    "target": "https://loveresale-dev-customer-frontend.eshtri-cluster-eu-de-1-bx-8f23923b84c5cec3cecb2d74397b77c3-0000.eu-de.containers.appdomain.cloud/",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug",
