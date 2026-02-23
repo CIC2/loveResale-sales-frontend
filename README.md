@@ -88,3 +88,15 @@ This folder hosts the application shell and the main building blocks. Below is a
   - Examples: UI atoms/molecules (buttons, cards), directives, pipes, small utilities.
   - Project note: API clients are placed here (e.g., `shared/api/`) for reuse across features.
   - Guideline: keep API clients presentation-agnostic; domain-heavy APIs can move to a feature or `core/` if needed.
+
+## 📚 Documentation
+
+Detailed documentation lives in the `docs/` folder:
+
+- [**Architecture**](docs/architecture.md) — Tech stack, app structure, bootstrap, path aliases, global styling, and i18n.
+- [**Routing**](docs/routing.md) — Route map, lazy loading, guards, and resolvers.
+- [**Core**](docs/core.md) — API modules, guards, interceptors, injections, constants, validators, and directives.
+- [**Features**](docs/features.md) — Feature catalog: purpose, routes, components, and dependencies per feature.
+- [**Shared**](docs/shared.md) — Shared components, pipes, directives, and shared API/state.
+- [**Developer guide**](docs/developer-guide.md) — Conventions, adding features and shared components, i18n, styling, running the app, and testing.
+- [**Backend API spec**](docs/backend-api-spec.md) — Backend API contract required by the frontend.
